@@ -12,7 +12,7 @@ module.exports = {
     screens: {
       sm: '480px',
       md: '768px',
-      xl: '1440px',
+      xl: '1280px',
     },
     extend: {
       container: {
@@ -20,14 +20,15 @@ module.exports = {
         padding: {
           DEFAULT: '1.25rem',
           sm: '1.25rem',
-          md: '3.75rem',
-          xl: '5rem',
+          md: '1.25rem',
+          xl: '1.25rem',
         },
       },
 
       colors: {
         red: '#EF4444',
         yellow: '#FFD500',
+        black: '#1A1A1A',
         // blueAccent: '#60A5FA',
         // blueDark: '#5483C9',
         // blueLight: '#BFDBFE',
@@ -35,11 +36,12 @@ module.exports = {
       },
 
       fontFamily: {
-        sans: ['Ubuntu', 'sans-serif'],
+        sans: ['Inter', 'sans-serif'],
+        alata: ['Alata', 'sans-serif'],
       },
 
       fontSize: {
-        small: ['16px', '24px'], // class="text-small"
+        small: ['18px', '24px'], // class="text-small"
         middle: ['20px', '24px'], // class='text-middle'
         big: ['24px', '28px'], // class="text-big"
         large: ['34px', '44px'], // class="text-large"
@@ -49,5 +51,6 @@ module.exports = {
   plugins: [
     require('@tailwindcss/forms'),
     require('prettier-plugin-tailwindcss'),
+    require('@tailwindcss/typography'),
   ],
 };

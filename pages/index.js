@@ -1,45 +1,40 @@
 import Head from 'next/head';
-import Image from 'next/image';
-import { Container } from '@/components';
-import { Hero } from '@/views';
+import mainRequest from 'utils/request';
+import Hero from 'views/Hero/Hero';
 
-const Home = () => {
+const Home = props => {
+  const { summary: summaryData, contact } = props;
+
   return (
     <>
       <Head>
         <title>Next App Template</title>
-        <meta name="description" content="Next app template" />
+        {/* <meta name="description" content="Next app template" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.ico" /> */}
       </Head>
 
-      <Hero />
-
-      <section>
-        <Container>
-          <div className="center">
-            <Image
-              className="logo"
-              src="/next.svg"
-              alt="Next.js Logo"
-              width={180}
-              height={37}
-              priority
-            />
-            <div className="thirteen">
-              <Image
-                src="/thirteen.svg"
-                alt="13"
-                width={40}
-                height={31}
-                priority
-              />
-            </div>
-          </div>
-        </Container>
-      </section>
+      <Hero summaryData={summaryData} contact={contact} />
     </>
   );
 };
 
 export default Home;
+
+export const getStaticProps = async () => {
+  const data = await mainRequest();
+
+  if (!data) {
+    return {
+      notFound: true,
+    };
+  }
+
+  return {
+    props: {
+      featuredProject: data.featuredProject,
+      summary: data.summary,
+      contact: data.contact,
+    },
+  };
+};

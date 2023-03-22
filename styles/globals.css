@@ -20,36 +20,36 @@ body {
   @apply font-sans;
 }
 
-@layer components {
-  /* example with tailwind */
-  /* .btn {
-    @apply inline-flex whitespace-nowrap rounded bg-pink-600 px-4 py-2 font-bold uppercase text-slate-50 transition-colors hover:bg-pink-500;
-  } */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
 
-  .center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    padding: 8rem 0 6rem;
-  }
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 
-  .logo,
-  .thirteen {
-    position: relative;
-  }
+.main-gradient {
+  background: linear-gradient(
+    89.81deg,
+    #4082ce 0.92%,
+    #7ed4ff 22.59%,
+    #6faeff 46.38%,
+    #dd5789 74.4%,
+    #fc95e5 98.19%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
 
-  .thirteen {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 75px;
-    height: 75px;
-    padding: 25px 10px;
-    margin-left: 16px;
-    transform: translateZ(0);
-    border-radius: var(--border-radius);
-    overflow: hidden;
-    box-shadow: 0px 2px 8px -1px #0000001a;
-  }
+.markdown-wrapper p:last-child {
+  margin-bottom: 0;
 }

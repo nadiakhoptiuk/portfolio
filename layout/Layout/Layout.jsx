@@ -1,6 +1,7 @@
-import { Footer, Header } from 'layout';
+import Footer from 'layout/Footer/Footer';
+import Header from 'layout/Header/Header';
 
-export const Layout = ({ children }) => {
+const Layout = ({ children }) => {
   return (
     <div>
       <Header />
@@ -11,3 +12,5 @@ export const Layout = ({ children }) => {
     </div>
   );
 };
+
+export default Layout;

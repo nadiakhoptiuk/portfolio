@@ -1,4 +1,4 @@
-import { Container } from '@/components';
+import Container from 'components/Container/Container';
 
 export const Header = () => {
   return (
@@ -9,3 +9,5 @@ export const Header = () => {
     </header>
   );
 };
+
+export default Header;
