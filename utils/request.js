@@ -41,7 +41,19 @@ const query = gql`
         link
         title
         icon
+        isemail
       }
+    }
+    workExperience {
+      workPosition {
+        id
+        positionTitle
+        requirements(markdown: false)
+        duration
+        companyTitle
+        companyPlacement
+      }
+      blockTitle
     }
   }
 `;

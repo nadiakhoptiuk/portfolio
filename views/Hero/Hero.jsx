@@ -5,7 +5,7 @@ import ContactBtnList from 'components/ContactBtnList/ContactBtnList';
 
 const Hero = ({ summaryData, contact }) => {
   const {
-    photo: { alt, secure_url },
+    photo: { secure_url },
     summary,
   } = summaryData;
 
@@ -25,10 +25,11 @@ const Hero = ({ summaryData, contact }) => {
         </div>
 
         <Image
-          alt={alt}
+          alt="Nadiia Khoptiuk photo"
           src={secure_url}
           width={498}
           height={773}
+          priority
           className="flex-grow-1 xl:h-[773px] xl:w-[498px]"
         />
       </div>

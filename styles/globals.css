@@ -53,3 +53,24 @@ body {
 .markdown-wrapper p:last-child {
   margin-bottom: 0;
 }
+
+/* MUI */
+.MuiBox-root {
+  @apply h-[300px] overflow-y-auto;
+}
+
+.MuiTabs-flexContainerVertical {
+  @apply w-[214px];
+}
+
+.MuiButtonBase-root.MuiTab-root {
+  @apply items-start capitalize;
+}
+
+.Mui-selected {
+  @apply bg-black !text-white;
+}
+
+.MuiTabs-indicator {
+  @apply bg-transparent;
+}

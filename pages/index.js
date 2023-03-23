@@ -1,9 +1,13 @@
 import Head from 'next/head';
 import mainRequest from 'utils/request';
+import Experience from 'views/Experience/Experience';
 import Hero from 'views/Hero/Hero';
+import Projects from 'views/Projects/Project';
 
 const Home = props => {
-  const { summary: summaryData, contact } = props;
+  // console.log(props);
+
+  const { summaryData, contact, projects, works } = props;
 
   return (
     <>
@@ -15,6 +19,10 @@ const Home = props => {
       </Head>
 
       <Hero summaryData={summaryData} contact={contact} />
+
+      <Experience data={works} />
+
+      <Projects data={projects} />
     </>
   );
 };
@@ -32,9 +40,10 @@ export const getStaticProps = async () => {
 
   return {
     props: {
-      featuredProject: data.featuredProject,
-      summary: data.summary,
+      projects: data.featuredProject,
+      summaryData: data.summary,
       contact: data.contact,
+      works: data.workExperience,
     },
   };
 };
