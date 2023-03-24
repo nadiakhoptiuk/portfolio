@@ -7,7 +7,7 @@ const Projects = ({ data }) => {
 
   return (
     <Section h2={blockTitle}>
-      <ul>
+      <ul className="gap-y-18 grid grid-cols-3 gap-x-12">
         {projects?.map(
           ({
             linkToGithub,
@@ -23,18 +23,21 @@ const Projects = ({ data }) => {
           }) => {
             return (
               <li key={id}>
-                <Image
-                  src={projectPreview.secure_url}
-                  alt={`preview of ${projectTitle}`}
-                  width={368}
-                  height={253}
-                />
+                <div className="mb-9 h-[253px] w-full">
+                  <Image
+                    src={projectPreview.secure_url}
+                    alt={`preview of ${projectTitle}`}
+                    width={368}
+                    height={253}
+                    className="h-full w-full object-cover object-left-top"
+                  />
+                </div>
 
-                <h3>{projectTitle}</h3>
+                <h3 className="mb-8 text-big">{projectTitle}</h3>
 
-                <p>{description}</p>
+                <p className="mb-8 text-small">{description}</p>
 
-                <p>{stack}</p>
+                <p className="text-small text-navyBlue">{stack}</p>
 
                 <a
                   href={linkToLivePage}

@@ -3,6 +3,7 @@ import mainRequest from 'utils/request';
 import Experience from 'views/Experience/Experience';
 import Hero from 'views/Hero/Hero';
 import Projects from 'views/Projects/Project';
+import Reviews from 'views/Reviews/Reviews';
 
 const Home = props => {
   // console.log(props);
@@ -23,6 +24,8 @@ const Home = props => {
       <Experience data={works} />
 
       <Projects data={projects} />
+
+      <Reviews />
     </>
   );
 };
