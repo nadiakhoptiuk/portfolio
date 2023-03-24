@@ -64,7 +64,7 @@ body {
 
 /* MUI TABS*/
 .mainTabsRoot {
-  @apply w-[calc(226px+32px)];
+  @apply w-[calc(276px+32px)];
 }
 
 .MuiTabs-flexContainer {

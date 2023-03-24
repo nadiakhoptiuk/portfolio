@@ -18,7 +18,7 @@ const TabsComponent = ({ data }) => {
       sx={{
         bgcolor: 'background.paper',
         display: 'flex',
-        height: 224,
+        height: 'auto',
       }}
     >
       <Tabs
@@ -31,8 +31,9 @@ const TabsComponent = ({ data }) => {
         indicatorColor="transparent"
         sx={{
           borderRight: 0,
-          width: '214px',
+          // width: '214px',
         }}
+        centered={false}
       >
         {data?.map(oneTab => {
           return <Tab key={oneTab.id} label={oneTab.tabName} />;

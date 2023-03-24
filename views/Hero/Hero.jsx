@@ -13,7 +13,9 @@ const Hero = ({ summaryData, contact }) => {
     <Section h1="Nadiia Khoptiuk" titleClassName="visually-hidden">
       <div className="flex justify-between">
         <div>
-          <p className="text-small text-black">Hello, I am</p>
+          <p className="text-small text-black">
+            Hello, I am a Full-Stack Developer
+          </p>
           <p className="!leading=[113px] main-gradient mb-6 flex h-[113px] w-max items-center font-alata !text-[82px]">
             Nadiia Khoptiuk
           </p>
