@@ -27,6 +27,7 @@ const TabsComponent = ({ data }) => {
         onChange={handleChange}
         aria-label="Vertical tabs"
         classes={{ root: 'mainTabsRoot' }}
+        indicatorColor="transparent"
         sx={{
           borderRight: 0,
           width: '214px',
@@ -40,10 +41,17 @@ const TabsComponent = ({ data }) => {
       {data?.map((oneTabPanel, index) => {
         return (
           <TabPanel key={oneTabPanel.id} value={value} index={index}>
-            <p>{oneTabPanel.position}</p>
-            <span>{oneTabPanel.date}</span>
-            <p>{oneTabPanel.blueText}</p>
-            <div>
+            <p className="mb-6 text-big">{oneTabPanel.position}</p>
+
+            <span className="absolute top-0 right-0 text-small">
+              {oneTabPanel.date}
+            </span>
+
+            <p className="mb-6 text-small !text-navyBlue">
+              {oneTabPanel.blueText}
+            </p>
+
+            <div className="prose prose-li:mb-3 prose-li:text-black prose-li:marker:text-black">
               <Markdown>{oneTabPanel.description}</Markdown>
             </div>
           </TabPanel>

@@ -14,7 +14,7 @@ const Hero = ({ summaryData, contact }) => {
       <div className="flex justify-between">
         <div>
           <p className="text-small text-black">Hello, I am</p>
-          <p className="leading=[113px] main-gradient w-max font-alata text-[82px]">
+          <p className="!leading=[113px] main-gradient mb-6 flex h-[113px] w-max items-center font-alata !text-[82px]">
             Nadiia Khoptiuk
           </p>
           <div className="markdown-wrapper text-small text-black prose-p:mb-6 xl:w-[600px]">

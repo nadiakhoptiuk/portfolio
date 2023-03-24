@@ -1,9 +1,13 @@
+@import 'node_modules/modern-normalize/modern-normalize.css';
 @tailwind base;
 
 @layer base {
   a {
-    color: inherit;
-    text-decoration: none;
+    @apply text-inherit no-underline;
+  }
+
+  button {
+    @apply font-sans !text-inherit;
   }
 }
 
@@ -17,7 +21,7 @@
 }
 
 body {
-  @apply font-sans;
+  @apply font-sans text-middle;
 }
 
 .visually-hidden {
@@ -50,14 +54,21 @@ body {
   color: transparent;
 }
 
-.markdown-wrapper p:last-child {
-  margin-bottom: 0;
+.section {
+  @apply pb-[88px];
+}
+
+.sectionTitle {
+  @apply mb-[60px] uppercase;
 }
 
 /* MUI TABS*/
-
 .mainTabsRoot {
   @apply w-[calc(226px+32px)];
+}
+
+.MuiTabs-flexContainer {
+  @apply relative before:absolute before:h-full before:w-[1px] before:bg-black before:content-[''];
 }
 
 .Mui-focusVisible .MuiTouchRipple-root {
@@ -65,11 +76,11 @@ body {
 }
 
 .MuiBox-root {
-  @apply h-[300px] overflow-y-auto;
+  @apply h-[340px] overflow-y-auto;
 }
 
 .MuiButtonBase-root.MuiTab-root {
-  @apply items-start capitalize;
+  @apply items-start !font-sans !text-middle capitalize;
 }
 
 .MuiButtonBase-root.Mui-selected {
@@ -77,5 +88,10 @@ body {
 }
 
 .MuiTabs-indicator {
-  @apply bg-transparent;
+  @apply !w-0;
+}
+
+/* Markdown */
+.markdown-wrapper p:last-child {
+  margin-bottom: 0;
 }

@@ -11,9 +11,7 @@ const TabPanel = props => {
       aria-labelledby={`vertical-tab-${index}`}
       className="w-full"
     >
-      {value === index && (
-        <Box sx={{ p: 3, width: '100%', flexBasis: '500px' }}>{children}</Box>
-      )}
+      {value === index && <Box className="relative pl-[100px]">{children}</Box>}
     </div>
   );
 };

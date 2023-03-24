@@ -29,6 +29,8 @@ module.exports = {
         red: '#EF4444',
         yellow: '#FFD500',
         black: '#1A1A1A',
+        blue: '#7ED4FF',
+        navyBlue: '#4082CE',
         // blueAccent: '#60A5FA',
         // blueDark: '#5483C9',
         // blueLight: '#BFDBFE',
@@ -41,9 +43,9 @@ module.exports = {
       },
 
       fontSize: {
-        small: ['18px', '24px'], // class="text-small"
-        middle: ['20px', '24px'], // class='text-middle'
-        big: ['24px', '28px'], // class="text-big"
+        small: ['16px', '24px'], // class="text-small"
+        middle: ['18px', '24px'], // class='text-middle'
+        big: ['24px', '29px'], // class="text-big"
         large: ['34px', '44px'], // class="text-large"
       },
     },
