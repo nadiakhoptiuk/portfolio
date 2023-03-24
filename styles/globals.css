@@ -54,20 +54,25 @@ body {
   margin-bottom: 0;
 }
 
-/* MUI */
-.MuiBox-root {
-  @apply h-[300px] overflow-y-auto;
+/* MUI TABS*/
+
+.mainTabsRoot {
+  @apply w-[calc(226px+32px)];
 }
 
-.MuiTabs-flexContainerVertical {
-  @apply w-[214px];
+.Mui-focusVisible .MuiTouchRipple-root {
+  @apply border-2 border-black;
+}
+
+.MuiBox-root {
+  @apply h-[300px] overflow-y-auto;
 }
 
 .MuiButtonBase-root.MuiTab-root {
   @apply items-start capitalize;
 }
 
-.Mui-selected {
+.MuiButtonBase-root.Mui-selected {
   @apply bg-black !text-white;
 }
 
