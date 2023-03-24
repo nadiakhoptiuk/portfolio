@@ -55,6 +55,18 @@ const query = gql`
       }
       blockTitle
     }
+    review {
+      blockTitle
+      recommendation {
+        date
+        id
+        name
+        positionTitle
+        quote
+        relationship
+        source
+      }
+    }
   }
 `;
 

@@ -51,9 +51,20 @@ const TabsComponent = ({ data }) => {
               {oneTabPanel.blueText}
             </p>
 
-            <div className="prose prose-li:mb-3 prose-li:text-black prose-li:marker:text-black">
+            <div className="prose prose-p:not-italic prose-li:mb-3 prose-li:text-black prose-li:marker:text-black">
               <Markdown>{oneTabPanel.description}</Markdown>
             </div>
+
+            {oneTabPanel?.source && (
+              <a
+                href={oneTabPanel.source}
+                rel="nofollow noreferrer noopener"
+                target="_blank"
+                className="text-small underline"
+              >
+                Source
+              </a>
+            )}
           </TabPanel>
         );
       })}

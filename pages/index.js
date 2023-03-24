@@ -8,7 +8,7 @@ import Reviews from 'views/Reviews/Reviews';
 const Home = props => {
   // console.log(props);
 
-  const { summaryData, contact, projects, works } = props;
+  const { summaryData, contact, projects, works, reviews } = props;
 
   return (
     <>
@@ -25,7 +25,7 @@ const Home = props => {
 
       <Projects data={projects} />
 
-      <Reviews />
+      <Reviews data={reviews} />
     </>
   );
 };
@@ -47,6 +47,7 @@ export const getStaticProps = async () => {
       summaryData: data.summary,
       contact: data.contact,
       works: data.workExperience,
+      reviews: data.review,
     },
   };
 };
