@@ -23,7 +23,7 @@ const Projects = ({ data }) => {
           }) => {
             return (
               <li key={id}>
-                <div className="mb-9 h-[253px] w-full">
+                <div className="mb-9 h-[253px] w-full overflow-hidden rounded">
                   <Image
                     src={projectPreview.secure_url}
                     alt={`preview of ${projectTitle}`}

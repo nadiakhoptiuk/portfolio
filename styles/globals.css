@@ -76,7 +76,7 @@ body {
 }
 
 .MuiBox-root {
-  @apply h-[340px] overflow-y-auto;
+  @apply h-[310px] overflow-y-auto;
 }
 
 .MuiButtonBase-root.MuiTab-root {

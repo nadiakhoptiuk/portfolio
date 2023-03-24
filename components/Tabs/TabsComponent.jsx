@@ -2,8 +2,9 @@ import { useState } from 'react';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
-import TabPanel from './TabPanel';
 import Markdown from 'markdown-to-jsx';
+import { Scrollbars } from 'react-custom-scrollbars-2';
+import TabPanel from './TabPanel';
 
 const TabsComponent = ({ data }) => {
   const [value, setValue] = useState(0);
@@ -51,20 +52,22 @@ const TabsComponent = ({ data }) => {
               {oneTabPanel.blueText}
             </p>
 
-            <div className="prose prose-p:not-italic prose-li:mb-3 prose-li:text-black prose-li:marker:text-black">
-              <Markdown>{oneTabPanel.description}</Markdown>
-            </div>
+            <Scrollbars style={{ width: '100%', height: 204 }} universal>
+              <div className="prose w-[600px] prose-p:mt-0 prose-p:not-italic prose-li:mt-0 prose-li:mb-3 prose-li:text-black prose-li:marker:text-black">
+                <Markdown>{oneTabPanel.description}</Markdown>
+              </div>
 
-            {oneTabPanel?.source && (
-              <a
-                href={oneTabPanel.source}
-                rel="nofollow noreferrer noopener"
-                target="_blank"
-                className="text-small underline"
-              >
-                Source
-              </a>
-            )}
+              {oneTabPanel?.source && (
+                <a
+                  href={oneTabPanel.source}
+                  rel="nofollow noreferrer noopener"
+                  target="_blank"
+                  className="text-small underline"
+                >
+                  Source
+                </a>
+              )}
+            </Scrollbars>
           </TabPanel>
         );
       })}
