@@ -31,7 +31,6 @@ const TabsComponent = ({ data }) => {
         indicatorColor="transparent"
         sx={{
           borderRight: 0,
-          // width: '214px',
         }}
         centered={false}
       >
@@ -53,7 +52,13 @@ const TabsComponent = ({ data }) => {
               {oneTabPanel.blueText}
             </p>
 
-            <Scrollbars style={{ width: '100%', height: 204 }} universal>
+            <Scrollbars
+              style={{ width: '100%', height: 204 }}
+              universal
+              autoHide
+              autoHideTimeout={1000}
+              autoHideDuration={200}
+            >
               <div className="prose w-[600px] prose-p:mt-0 prose-p:not-italic prose-li:mt-0 prose-li:mb-3 prose-li:text-black prose-li:marker:text-black">
                 <Markdown>{oneTabPanel.description}</Markdown>
               </div>

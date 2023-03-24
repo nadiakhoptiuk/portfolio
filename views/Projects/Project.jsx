@@ -29,7 +29,8 @@ const Projects = ({ data }) => {
                     alt={`preview of ${projectTitle}`}
                     width={368}
                     height={253}
-                    className="h-full w-full object-cover object-left-top"
+                    quality={100}
+                    className="h-full w-full object-cover object-center"
                   />
                 </div>
 
