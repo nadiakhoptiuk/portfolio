@@ -2,7 +2,7 @@ import Section from 'components/Section/Section';
 import TabsComponent from 'components/Tabs/TabsComponent';
 
 const Experience = ({ data }) => {
-  const { blockTitle, workPosition } = data;
+  const { blockTitle, blockAnchorId, workPosition } = data;
 
   const expData = workPosition?.reduce(
     (
@@ -32,7 +32,7 @@ const Experience = ({ data }) => {
   );
 
   return (
-    <Section h2={blockTitle}>
+    <Section h2={blockTitle} id={blockAnchorId}>
       <TabsComponent data={expData} />
     </Section>
   );

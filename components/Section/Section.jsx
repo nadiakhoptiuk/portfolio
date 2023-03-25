@@ -9,9 +9,10 @@ const Section = ({
   titleClassName,
   className,
   containerClassName,
+  id,
 }) => {
   return (
-    <section className={classNames('section', className)}>
+    <section className={classNames('section', className)} id={id}>
       <Container className={classNames('container', containerClassName)}>
         {h1 ? (
           <h1 className={classNames('sectionTitle', { titleClassName })}>
@@ -38,4 +39,5 @@ Section.propTypes = {
   titleClassName: PropTypes.string,
   className: PropTypes.string,
   containerClassName: PropTypes.string,
+  id: PropTypes.string,
 };

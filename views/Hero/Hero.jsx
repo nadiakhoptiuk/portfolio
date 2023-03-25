@@ -7,10 +7,15 @@ const Hero = ({ summaryData, contact }) => {
   const {
     photo: { secure_url },
     summary,
+    blockAnchorId,
   } = summaryData;
 
   return (
-    <Section h1="Nadiia Khoptiuk" titleClassName="visually-hidden">
+    <Section
+      h1="Nadiia Khoptiuk"
+      titleClassName="visually-hidden"
+      id={blockAnchorId}
+    >
       <div className="flex justify-between">
         <div>
           <p className="text-small text-black">

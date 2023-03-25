@@ -59,7 +59,7 @@ body {
 }
 
 .sectionTitle {
-  @apply mb-[60px] uppercase;
+  @apply mb-[60px] text-big uppercase;
 }
 
 /* MUI TABS*/

@@ -15,22 +15,10 @@ const mainRequest = () => {
 
 const query = gql`
   query {
-    featuredProject {
-      project {
-        id
-        description
-        isCommand
-        linkToGithub
-        linkToLivePage
-        linkToPresentation
-        projectPreview
-        projectTitle
-        role
-        stack
-      }
-      blockTitle
-    }
     summary {
+      blockTitle
+      blockAnchorId
+      order
       photo
       summary
     }
@@ -54,9 +42,30 @@ const query = gql`
         companyPlacement
       }
       blockTitle
+      blockAnchorId
+      order
+    }
+    featuredProject {
+      project {
+        id
+        description
+        isCommand
+        linkToGithub
+        linkToLivePage
+        linkToPresentation
+        projectPreview
+        projectTitle
+        role
+        stack
+      }
+      blockTitle
+      blockAnchorId
+      order
     }
     review {
       blockTitle
+      blockAnchorId
+      order
       recommendation {
         date
         id

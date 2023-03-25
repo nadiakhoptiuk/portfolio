@@ -2,7 +2,7 @@ import Section from 'components/Section/Section';
 import TabsComponent from 'components/Tabs/TabsComponent';
 
 const Reviews = ({ data }) => {
-  const { blockTitle, recommendation } = data;
+  const { blockTitle, blockAnchorId, recommendation } = data;
 
   const expData = recommendation?.reduce(
     (acc, { id, name, positionTitle, quote, date, relationship, source }) => {
@@ -23,7 +23,7 @@ const Reviews = ({ data }) => {
   );
 
   return (
-    <Section h2={blockTitle}>
+    <Section h2={blockTitle} id={blockAnchorId}>
       <TabsComponent data={expData} />
     </Section>
   );

@@ -3,11 +3,11 @@ import Image from 'next/image';
 // import LivePage from '../../public/icons/live_page_icon.svg';
 
 const Projects = ({ data }) => {
-  const { blockTitle, project: projects } = data;
+  const { blockTitle, blockAnchorId, project: projects } = data;
 
   return (
-    <Section h2={blockTitle}>
-      <ul className="gap-y-18 grid grid-cols-3 gap-x-12">
+    <Section h2={blockTitle} id={blockAnchorId}>
+      <ul className="gap-y-18 grid grid-cols-3 gap-x-12 gap-y-24">
         {projects?.map(
           ({
             linkToGithub,
