@@ -28,7 +28,6 @@ const query = gql`
         id
         link
         title
-        icon
         isemail
       }
     }
@@ -46,21 +45,23 @@ const query = gql`
       order
     }
     featuredProject {
+      blockTitle
+      order
+      blockAnchorId
       project {
+        stack
+        role
+        projectTitle
+        projectPreview
+        isCommand
         id
         description
-        isCommand
-        linkToGithub
-        linkToLivePage
-        linkToPresentation
-        projectPreview
-        projectTitle
-        role
-        stack
+        button {
+          id
+          link
+          title
+        }
       }
-      blockTitle
-      blockAnchorId
-      order
     }
     review {
       blockTitle

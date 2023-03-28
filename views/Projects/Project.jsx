@@ -1,6 +1,6 @@
-import Section from 'components/Section/Section';
 import Image from 'next/image';
-// import LivePage from '../../public/icons/live_page_icon.svg';
+import Button from 'components/Button/Button';
+import Section from 'components/Section/Section';
 
 const Projects = ({ data }) => {
   const { blockTitle, blockAnchorId, project: projects } = data;
@@ -10,9 +10,6 @@ const Projects = ({ data }) => {
       <ul className="gap-y-18 grid grid-cols-3 gap-x-12 gap-y-24">
         {projects?.map(
           ({
-            linkToGithub,
-            linkToLivePage,
-            linkToPresentation,
             projectPreview,
             projectTitle,
             // role,
@@ -20,6 +17,7 @@ const Projects = ({ data }) => {
             stack,
             id,
             description,
+            button,
           }) => {
             return (
               <li key={id}>
@@ -40,32 +38,15 @@ const Projects = ({ data }) => {
 
                 <p className="text-small text-navyBlue">{stack}</p>
 
-                <a
-                  href={linkToLivePage}
-                  target="_blank"
-                  rel="noopener noreferrer nofollow"
-                >
-                  {/* <Image src={LivePage} alt="live page icon" /> */}
-                  Live page
-                </a>
-
-                <a
-                  href={linkToGithub}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {/* <Image src={}/> */}
-                </a>
-
-                {linkToPresentation && (
-                  <a
-                    href={linkToPresentation}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {/* <Image src={}/> */}
-                  </a>
-                )}
+                <ul>
+                  {button?.map(({ id, link, title }) => {
+                    return (
+                      <li key={id}>
+                        <Button isemail={false} title={title} link={link} />
+                      </li>
+                    );
+                  })}
+                </ul>
               </li>
             );
           },
