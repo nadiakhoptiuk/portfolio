@@ -1,10 +1,11 @@
 import LivePage from '../../public/icons/live_page_icon.svg';
 import GitHub from '../../public/icons/github.svg';
-import YouTube from '../../public/icons/youtube_icon_with_text.svg';
+import BigGitHub from '../../public/icons/big-github-icon.svg';
+import YouTube from '../../public/icons/youtube_icon.svg';
 import Email from '../../public/icons/email.svg';
 import LinkedIn from '../../public/icons/linkedin.svg';
 
-const Button = ({ className, title, link, isemail }) => {
+const Button = ({ className, title, link, isemail, isTitle = 'true' }) => {
   return (
     <>
       {isemail && (
@@ -13,9 +14,8 @@ const Button = ({ className, title, link, isemail }) => {
           className={className}
           rel="nofollow noreferrer noopener"
         >
-          {title}
-
           <Email />
+          <span className="ml-[10px] text-middle">{title}</span>
         </a>
       )}
 
@@ -26,12 +26,17 @@ const Button = ({ className, title, link, isemail }) => {
           rel="nofollow noreferrer noopener"
           target="_blank"
         >
-          {title}
-
           {title === 'Live page' && <LivePage />}
           {title === 'LinkedIn' && <LinkedIn />}
-          {title === 'GitHub' && <GitHub />}
-          {title === 'Presentation' && <YouTube />}
+
+          {title === 'GitHub' && isTitle === 'true' && <GitHub />}
+          {title === 'GitHub' && isTitle === false && <BigGitHub />}
+
+          {title === 'Presentation' && (
+            <YouTube className="!w-[39px !h-[39px]" />
+          )}
+
+          {isTitle && <span className="ml-[10px] text-middle">{title}</span>}
         </a>
       )}
     </>

@@ -1,6 +1,7 @@
 import Image from 'next/image';
-import Button from 'components/Button/Button';
 import Section from 'components/Section/Section';
+import ProjectBtnList from 'components/ProjectBtnList/ProjectBtnList';
+import ProjectTypeInfo from 'components/ProjectTypeInfo/ProjectTypeInfo';
 
 const Projects = ({ data }) => {
   const { blockTitle, blockAnchorId, project: projects } = data;
@@ -12,15 +13,15 @@ const Projects = ({ data }) => {
           ({
             projectPreview,
             projectTitle,
-            // role,
-            // iscommand,
+            role,
+            isCommand,
             stack,
             id,
             description,
             button,
           }) => {
             return (
-              <li key={id}>
+              <li key={id} className="flex flex-col justify-start">
                 <div className="mb-9 h-[253px] w-full overflow-hidden rounded">
                   <Image
                     src={projectPreview.secure_url}
@@ -32,21 +33,15 @@ const Projects = ({ data }) => {
                   />
                 </div>
 
-                <h3 className="mb-8 text-big">{projectTitle}</h3>
+                <h3 className="mb-6 text-big">{projectTitle}</h3>
 
-                <p className="mb-8 text-small">{description}</p>
+                <p className="mb-6 text-small">{description}</p>
 
-                <p className="text-small text-navyBlue">{stack}</p>
+                <p className="mb-[30px] text-small text-navyBlue">{stack}</p>
 
-                <ul>
-                  {button?.map(({ id, link, title }) => {
-                    return (
-                      <li key={id}>
-                        <Button isemail={false} title={title} link={link} />
-                      </li>
-                    );
-                  })}
-                </ul>
+                <ProjectTypeInfo role={role} isCommand={isCommand} />
+
+                <ProjectBtnList buttonData={button} />
               </li>
             );
           },

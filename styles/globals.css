@@ -62,6 +62,18 @@ body {
   @apply mb-[60px] text-big uppercase;
 }
 
+.grad-1 {
+  background-image: linear-gradient(45deg, #4082ce 0%, #7ed4ff 100%);
+}
+
+.grad-2 {
+  background-image: linear-gradient(45deg, #6faeff 0%, #dd5789 100%);
+}
+
+.grad-3 {
+  background-image: linear-gradient(45deg, #dd5789 0%, #fc95e5 100%);
+}
+
 /* MUI TABS*/
 .mainTabsRoot {
   @apply w-[calc(276px+32px)];
@@ -94,4 +106,21 @@ body {
 /* Markdown */
 .markdown-wrapper p:last-child {
   margin-bottom: 0;
+}
+
+/* Projects */
+.livePageItem {
+  @apply grad-1 flex h-[54px] w-[145px] items-center justify-center rounded border-transparent;
+}
+
+.gitAndYouTubeItem {
+  @apply ml-[30px] flex h-[39px] w-[39px] items-center justify-center rounded;
+}
+
+.livePageLink {
+  @apply flex h-[calc(100%-4px)] w-[calc(100%-4px)] items-center justify-center rounded bg-white;
+}
+
+.gitAndYouTubeLink {
+  @apply flex h-[39px] w-[39px] items-center justify-center;
 }

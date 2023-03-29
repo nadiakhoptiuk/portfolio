@@ -1,5 +1,6 @@
 import Container from 'components/Container/Container';
 import NavBar from 'components/NavBar/NavBar';
+import Link from 'next/link';
 
 export const Header = ({ data }) => {
   const keys = Object.values(data);
@@ -15,7 +16,9 @@ export const Header = ({ data }) => {
   return (
     <header className="fixed top-0 left-0 z-10 w-[100vw] bg-black">
       <Container className="container flex items-center justify-between">
-        <p className="text-white">N. Khoptiuk</p>
+        <Link href="/" className="text-white">
+          N. Khoptiuk
+        </Link>
 
         <NavBar anchors={sortedAnchors} />
       </Container>
