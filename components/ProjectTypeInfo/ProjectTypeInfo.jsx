@@ -3,8 +3,8 @@ import CommandIcon from '../../public/icons/toggle-command-icon.svg';
 
 const ProjectTypeInfo = ({ role = '', isCommand }) => {
   return (
-    <div>
-      <div className="mb-9 flex items-center text-little">
+    <div className="mb-9">
+      <div className="mb-4 flex items-center text-little">
         <span className="mr-[14px] text-little">own</span>
 
         {isCommand === true ? <CommandIcon /> : <OwnIcon />}
@@ -12,7 +12,7 @@ const ProjectTypeInfo = ({ role = '', isCommand }) => {
         <span className="ml-[14px] text-little">command</span>
       </div>
 
-      {role && <p className="mb-[30px] text-little">Role: {role}</p>}
+      {role && <p className="text-little">Role: {role}</p>}
     </div>
   );
 };
