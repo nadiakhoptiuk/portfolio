@@ -17,14 +17,16 @@ const Hero = ({ summaryData, contact }) => {
       id={blockAnchorId}
     >
       <div className="flex justify-between">
-        <div>
-          <p className="text-small text-black">
+        <div className="pt-[100px]">
+          <p className="mb-9 text-big text-black">
             Hello, I am a Full-Stack Developer
           </p>
-          <p className="!leading=[113px] main-gradient mb-6 flex h-[113px] w-max items-center font-alata !text-[82px]">
+
+          <p className="!leading=[113px] main-gradient mb-9 flex h-[113px] w-max items-center font-alata !text-[82px]">
             Nadiia Khoptiuk
           </p>
-          <div className="markdown-wrapper text-small text-black prose-p:mb-6 xl:w-[600px]">
+
+          <div className="markdown-wrapper mb-16 text-[20px] leading-[28px] text-black prose-p:mb-9 xl:w-[600px]">
             <Markdown>{summary}</Markdown>
           </div>
 
@@ -37,7 +39,7 @@ const Hero = ({ summaryData, contact }) => {
           width={498}
           height={773}
           priority
-          className="flex-grow-1 xl:h-[773px] xl:w-[498px]"
+          className="flex-grow-1 relative top-[-4px] rounded xl:h-[757px] xl:w-[481px]"
         />
       </div>
     </Section>

@@ -21,7 +21,7 @@
 }
 
 body {
-  @apply font-sans text-middle;
+  @apply pt-[70px] font-sans text-middle;
 }
 
 .visually-hidden {
@@ -55,11 +55,11 @@ body {
 }
 
 .section {
-  @apply pb-[88px];
+  @apply pb-[100px];
 }
 
 .sectionTitle {
-  @apply mb-[60px] text-big uppercase;
+  @apply mb-[60px] text-big font-light uppercase;
 }
 
 .grad-1 {
@@ -92,11 +92,11 @@ body {
 }
 
 .MuiButtonBase-root.MuiTab-root {
-  @apply mb-1 h-[56px] w-[376px] max-w-[376px] items-start py-[18px] px-[16px] !font-sans !text-middle capitalize last:mb-0;
+  @apply mb-1 h-[56px] w-[376px] max-w-[376px] items-start !rounded py-[18px] px-[16px] !font-sans !text-middle capitalize last:mb-0;
 }
 
 .MuiButtonBase-root.Mui-selected {
-  @apply h-[56px] bg-black !text-white;
+  @apply h-[56px] !rounded bg-black !text-white;
 }
 
 .MuiTabs-indicator {
@@ -168,9 +168,9 @@ body {
 }
 
 .projectCard .tag {
-  @apply transition-all delay-200 duration-700 ease-linear;
+  @apply translate-x-0 transition-all delay-200 duration-700 ease-linear;
 }
 
 .projectCard:hover .tag {
-  @apply left-[35px] transition-all delay-200 duration-700 ease-linear;
+  @apply translate-x-5 transition-all delay-200 duration-700 ease-linear;
 }
