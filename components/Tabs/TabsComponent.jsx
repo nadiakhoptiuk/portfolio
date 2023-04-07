@@ -16,7 +16,6 @@ const TabsComponent = ({ data }) => {
   return (
     <Box
       sx={{
-        bgcolor: 'background.paper',
         display: 'flex',
         height: 'auto',
       }}
@@ -35,7 +34,13 @@ const TabsComponent = ({ data }) => {
         centered={false}
       >
         {data?.map(oneTab => {
-          return <Tab key={oneTab.id} label={oneTab.tabName} />;
+          return (
+            <Tab
+              key={oneTab.id}
+              label={oneTab.tabName}
+              className="w-[100%] rounded"
+            />
+          );
         })}
       </Tabs>
 
@@ -53,13 +58,13 @@ const TabsComponent = ({ data }) => {
             </p>
 
             <Scrollbars
-              style={{ width: '100%', height: 204 }}
+              style={{ width: '100%', height: 184 }}
               universal
               autoHide
               autoHideTimeout={1000}
               autoHideDuration={200}
             >
-              <div className="prose w-[600px] prose-p:mt-0 prose-p:not-italic prose-li:mt-0 prose-li:mb-3 prose-li:text-black prose-li:marker:text-black">
+              <div className="prose w-[479px] prose-p:mt-0 prose-p:not-italic prose-li:mt-0 prose-li:mb-3 prose-li:text-black prose-li:marker:text-black">
                 <Markdown>{oneTabPanel.description}</Markdown>
               </div>
 

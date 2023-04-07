@@ -1,51 +1,60 @@
-import Image from 'next/image';
 import Section from 'components/Section/Section';
-import ProjectBtnList from 'components/ProjectBtnList/ProjectBtnList';
-import ProjectTypeInfo from 'components/ProjectTypeInfo/ProjectTypeInfo';
+import ProjectCardOverlay from 'components/ProjectCardOverlay/ProjectCardOverlay';
+import { useState } from 'react';
+import Modal from 'components/Modal/Modal';
 
 const Projects = ({ data }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [openedModalId, setOpenedModalId] = useState(null);
+
   const { blockTitle, blockAnchorId, project: projects } = data;
 
+  const handleModalOpen = id => {
+    setIsModalOpen(true);
+    setOpenedModalId(id);
+  };
+
   return (
-    <Section h2={blockTitle} id={blockAnchorId}>
+    <Section
+      h2={blockTitle}
+      id={blockAnchorId}
+      containerClassName="border-t-[1px]  border-black/50 pt-[64px]"
+    >
       <ul className="gap-y-18 grid grid-cols-3 gap-x-12 gap-y-24">
-        {projects?.map(
-          ({
-            projectPreview,
-            projectTitle,
-            role,
-            isCommand,
-            stack,
-            id,
-            description,
-            button,
-          }) => {
-            return (
-              <li key={id} className="flex flex-col justify-start">
-                <div className="mb-9 h-[253px] w-full overflow-hidden rounded">
-                  <Image
-                    src={projectPreview.secure_url}
-                    alt={`preview of ${projectTitle}`}
-                    width={368}
-                    height={253}
-                    quality={100}
-                    className="h-full w-full object-cover object-center"
-                  />
-                </div>
+        {projects?.map(project => {
+          const { projectPreview, projectTitle, icon, tag, stack, id } =
+            project;
 
-                <h3 className="mb-6 text-big">{projectTitle}</h3>
+          return (
+            <li key={id} className="projectCard flex flex-col justify-start">
+              <button
+                type="button"
+                onClick={() => handleModalOpen(id)}
+                className="inline-block text-left"
+              >
+                <ProjectCardOverlay
+                  projectPreview={projectPreview}
+                  icon={icon}
+                  tag={tag}
+                  projectTitle={projectTitle}
+                />
 
-                <p className="mb-6 text-small">{description}</p>
+                <h3 className=" mb-6 text-big">{projectTitle}</h3>
 
-                <p className="mb-[30px] text-small text-navyBlue">{stack}</p>
+                <p className="text-small text-navyBlue">{stack}</p>
+              </button>
 
-                <ProjectTypeInfo role={role} isCommand={isCommand} />
-
-                <ProjectBtnList buttonData={button} />
-              </li>
-            );
-          },
-        )}
+              {isModalOpen && id === openedModalId && (
+                <Modal
+                  setIsModalOpen={setIsModalOpen}
+                  isModalOpen={isModalOpen}
+                  setOpenedModalId={setOpenedModalId}
+                  projectInfo={project}
+                />
+              )}
+            </li>
+          );
+        })}
       </ul>
     </Section>
   );

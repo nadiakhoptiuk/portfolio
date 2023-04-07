@@ -47,7 +47,7 @@ export default function Document() {
           crossOrigin="true"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Alata&family=Inter:wght@300&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Alata&family=Inter:wght@300;500&display=swap"
           rel="stylesheet"
         />
 

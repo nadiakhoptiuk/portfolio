@@ -50,6 +50,8 @@ const query = gql`
       blockAnchorId
       project {
         stack
+        icon
+        tag
         role
         projectTitle
         projectPreview

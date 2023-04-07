@@ -2,7 +2,7 @@ import Button from 'components/Button/Button';
 
 const ProjectBtnList = ({ buttonData }) => {
   return (
-    <ul className="mt-auto flex items-center">
+    <ul className="flex items-center">
       {buttonData?.map(({ id, link, title }) => {
         return (
           <li

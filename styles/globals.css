@@ -75,12 +75,12 @@ body {
 }
 
 /* MUI TABS*/
-.mainTabsRoot {
-  @apply w-[calc(276px+32px)];
+.MuiTabs-flexContainer {
+  @apply !w-[376px];
 }
 
-.MuiTabs-flexContainer {
-  @apply relative before:absolute before:h-full before:w-[1px] before:bg-black before:content-[''];
+.mainTabsRoot {
+  @apply mr-[139px] !shrink-0;
 }
 
 .Mui-focusVisible .MuiTouchRipple-root {
@@ -92,15 +92,28 @@ body {
 }
 
 .MuiButtonBase-root.MuiTab-root {
-  @apply items-start !font-sans !text-middle capitalize;
+  @apply mb-1 h-[56px] w-[376px] max-w-[376px] items-start py-[18px] px-[16px] !font-sans !text-middle capitalize last:mb-0;
 }
 
 .MuiButtonBase-root.Mui-selected {
-  @apply bg-black !text-white;
+  @apply h-[56px] bg-black !text-white;
 }
 
 .MuiTabs-indicator {
   @apply !w-0;
+}
+
+/* MUI MODAL*/
+.MuiDialog-container {
+  @apply mx-auto w-[994px];
+}
+
+.MuiPaper-root.MuiDialog-paper {
+  @apply h-[100%] max-h-[700px] w-[100%] max-w-[100%] px-9 pt-10;
+}
+
+.MuiDialogContent-root {
+  @apply border-none;
 }
 
 /* Markdown */
@@ -123,4 +136,41 @@ body {
 
 .gitAndYouTubeLink {
   @apply flex h-[39px] w-[39px] items-center justify-center;
+}
+
+/* Project Card */
+.projectCard {
+  @apply hover:cursor-pointer;
+}
+
+.projectCard .previewImg {
+  @apply scale-100 transition-all delay-200 duration-700 ease-linear;
+}
+
+.projectCard:hover .previewImg {
+  @apply scale-110 transition-all delay-200 duration-700 ease-linear;
+}
+
+.projectCard .overlay {
+  @apply absolute top-0 left-0 flex h-full w-full items-center justify-center bg-black opacity-50 transition-all delay-200 duration-700 ease-linear;
+}
+
+.projectCard:hover .overlay {
+  @apply opacity-70 transition-all delay-200 duration-700 ease-linear;
+}
+
+.projectCard .projectLogo {
+  @apply scale-100 transition-all delay-200 duration-700 ease-linear;
+}
+
+.projectCard:hover .projectLogo {
+  @apply scale-90 transition-all delay-200 duration-700 ease-linear;
+}
+
+.projectCard .tag {
+  @apply transition-all delay-200 duration-700 ease-linear;
+}
+
+.projectCard:hover .tag {
+  @apply left-[35px] transition-all delay-200 duration-700 ease-linear;
 }
