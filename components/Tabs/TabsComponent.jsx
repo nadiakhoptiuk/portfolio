@@ -58,7 +58,7 @@ const TabsComponent = ({ data }) => {
             </p>
 
             <Scrollbars
-              style={{ width: '100%', height: 'calc(100% - 106px)' }}
+              style={{ width: '100%', height: '224px' }}
               universal
               autoHide
               autoHideTimeout={1000}
