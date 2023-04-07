@@ -4,7 +4,7 @@ import CommandIcon from '../../public/icons/toggle-command-icon.svg';
 const ProjectTypeInfo = ({ role = '', isCommand }) => {
   return (
     <div>
-      <div className="mb-4 flex items-center text-little">
+      <div className="mb-9 flex items-center text-little">
         <span className="mr-[14px] text-little">own</span>
 
         {isCommand === true ? <CommandIcon /> : <OwnIcon />}

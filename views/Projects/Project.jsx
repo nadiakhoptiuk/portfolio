@@ -30,7 +30,7 @@ const Projects = ({ data }) => {
               <button
                 type="button"
                 onClick={() => handleModalOpen(id)}
-                className="inline-block text-left"
+                className="cardButton inline-block text-left"
               >
                 <ProjectCardOverlay
                   projectPreview={projectPreview}
@@ -39,7 +39,7 @@ const Projects = ({ data }) => {
                   projectTitle={projectTitle}
                 />
 
-                <h3 className=" mb-6 text-big">{projectTitle}</h3>
+                <h3 className="cardTitle mb-6 text-big">{projectTitle}</h3>
 
                 <p className="text-small text-navyBlue">{stack}</p>
               </button>

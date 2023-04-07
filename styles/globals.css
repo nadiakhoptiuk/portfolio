@@ -88,7 +88,7 @@ body {
 }
 
 .MuiBox-root {
-  @apply h-[310px] overflow-y-auto;
+  @apply h-[330px] overflow-y-auto;
 }
 
 .MuiButtonBase-root.MuiTab-root {
@@ -139,6 +139,7 @@ body {
 }
 
 /* Project Card */
+
 .projectCard {
   @apply hover:cursor-pointer;
 }
@@ -147,7 +148,8 @@ body {
   @apply scale-100 transition-all delay-200 duration-700 ease-linear;
 }
 
-.projectCard:hover .previewImg {
+.projectCard:hover .previewImg,
+.cardButton:focus .previewImg {
   @apply scale-110 transition-all delay-200 duration-700 ease-linear;
 }
 
@@ -155,7 +157,8 @@ body {
   @apply absolute top-0 left-0 flex h-full w-full items-center justify-center bg-black opacity-50 transition-all delay-200 duration-700 ease-linear;
 }
 
-.projectCard:hover .overlay {
+.projectCard:hover .overlay,
+.cardButton:focus .overlay {
   @apply opacity-70 transition-all delay-200 duration-700 ease-linear;
 }
 
@@ -163,7 +166,8 @@ body {
   @apply scale-100 transition-all delay-200 duration-700 ease-linear;
 }
 
-.projectCard:hover .projectLogo {
+.projectCard:hover .projectLogo,
+.cardButton:focus .projectLogo {
   @apply scale-90 transition-all delay-200 duration-700 ease-linear;
 }
 
@@ -171,6 +175,7 @@ body {
   @apply translate-x-0 transition-all delay-200 duration-700 ease-linear;
 }
 
-.projectCard:hover .tag {
+.projectCard:hover .tag,
+.cardButton:focus .tag {
   @apply translate-x-5 transition-all delay-200 duration-700 ease-linear;
 }
