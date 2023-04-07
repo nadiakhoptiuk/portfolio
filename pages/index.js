@@ -6,8 +6,6 @@ import Projects from 'views/Projects/Project';
 import Reviews from 'views/Reviews/Reviews';
 
 const Home = props => {
-  // console.log(props);
-
   const { summaryData, contact, projects, works, reviews } = props;
 
   return (

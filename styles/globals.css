@@ -55,7 +55,7 @@ body {
 }
 
 .section {
-  @apply pb-[100px];
+  @apply pb-[100px] max-xl:hidden;
 }
 
 .sectionTitle {
@@ -88,7 +88,7 @@ body {
 }
 
 .MuiBox-root {
-  @apply h-[330px] overflow-y-auto;
+  @apply h-[350px] overflow-y-auto;
 }
 
 .MuiButtonBase-root.MuiTab-root {
