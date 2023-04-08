@@ -47,7 +47,9 @@ const TabsComponent = ({ data }) => {
       {data?.map((oneTabPanel, index) => {
         return (
           <TabPanel key={oneTabPanel.id} value={value} index={index}>
-            <p className="mb-6 text-big font-thin">{oneTabPanel.position}</p>
+            <p className="mb-6 font-playfair text-big font-thin">
+              {oneTabPanel.position}
+            </p>
 
             <span className="absolute top-0 right-0 text-small">
               {oneTabPanel.date}
