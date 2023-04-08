@@ -39,6 +39,7 @@ const Modal = ({
         aria-describedby="modal with project info"
         open={isModalOpen}
         transitionDuration={200}
+        disableRestoreFocus
       >
         <DialogActions className="absolute right-0 top-0 h-[64px]">
           <Button autoFocus onClick={handleClose}>
@@ -46,7 +47,10 @@ const Modal = ({
           </Button>
         </DialogActions>
 
-        <DialogTitle id="modal-title" className="text-big font-medium">
+        <DialogTitle
+          id="modal-title"
+          className="font-playfair text-big font-medium"
+        >
           {projectTitle}
         </DialogTitle>
 

@@ -7,7 +7,7 @@
   }
 
   button {
-    @apply font-sans !text-inherit;
+    @apply font-sans font-thin !text-inherit;
   }
 }
 
@@ -38,40 +38,20 @@ body {
   overflow: hidden;
 }
 
-.main-gradient {
-  background: linear-gradient(
-    89.81deg,
-    #4082ce 0.92%,
-    #7ed4ff 22.59%,
-    #6faeff 46.38%,
-    #dd5789 74.4%,
-    #feb5ee 98.19%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-}
-
 .section {
-  @apply pb-[100px] max-xl:hidden;
+  @apply pb-[100px] pt-[36px] max-xl:hidden;
 }
 
 .sectionTitle {
-  @apply mb-[60px] text-big font-light uppercase;
+  @apply relative mb-[64px] font-playfair text-[38px] font-black leading-[55px] after:absolute after:top-[-36px] after:left-0 after:h-[2px] after:w-[67px] after:bg-navyBlue after:content-[''];
 }
 
-.grad-1 {
-  background-image: linear-gradient(45deg, #4082ce 0%, #7ed4ff 100%);
+.typicalBtn {
+  @apply flex h-[100%] w-[100%] items-center justify-center  bg-white transition-colors duration-300 hover:bg-navyBlue hover:text-white  focus:bg-navyBlue focus:text-white;
 }
 
-.grad-2 {
-  background-image: linear-gradient(45deg, #6faeff 0%, #dd5789 100%);
-}
-
-.grad-3 {
-  background-image: linear-gradient(45deg, #dd5789 0%, #fc95e5 100%);
+.typicalBtn > svg {
+  fill: currentColor;
 }
 
 /* MUI TABS*/
@@ -92,7 +72,7 @@ body {
 }
 
 .MuiButtonBase-root.MuiTab-root {
-  @apply mb-1 h-[56px] w-[376px] max-w-[376px] items-start !rounded py-[18px] px-[16px] !font-sans !text-middle capitalize last:mb-0;
+  @apply mb-1 h-[56px] w-[376px] max-w-[376px] items-start !rounded !border-2 border-navyBlue py-[18px] px-[16px] !font-sans !text-middle !font-thin capitalize last:mb-0;
 }
 
 .MuiButtonBase-root.Mui-selected {
@@ -123,7 +103,7 @@ body {
 
 /* Projects */
 .livePageItem {
-  @apply grad-1 flex h-[54px] w-[145px] items-center justify-center rounded border-transparent;
+  @apply flex h-[54px] w-[145px] items-center justify-center rounded border-2 border-navyBlue bg-white;
 }
 
 .gitAndYouTubeItem {
@@ -131,11 +111,21 @@ body {
 }
 
 .livePageLink {
-  @apply flex h-[calc(100%-4px)] w-[calc(100%-4px)] items-center justify-center rounded bg-white;
+  @apply typicalBtn flex h-[100%] w-[100%] items-center justify-center  bg-white text-black transition-colors duration-300 hover:text-white focus:text-white;
+}
+
+.livePageLink > svg,
+.livePageLink > svg {
+  fill: currentColor;
 }
 
 .gitAndYouTubeLink {
-  @apply flex h-[39px] w-[39px] items-center justify-center;
+  @apply flex h-[39px] w-[39px] items-center justify-center text-black transition-colors duration-300 hover:text-navyBlue focus:text-navyBlue;
+}
+
+.gitAndYouTubeLink > svg,
+.gitAndYouTubeLink > svg {
+  fill: currentColor;
 }
 
 /* Project Card */
@@ -178,4 +168,13 @@ body {
 .projectCard:hover .tag,
 .cardButton:focus .tag {
   @apply translate-x-5 transition-all delay-200 duration-700 ease-linear;
+}
+
+.projectCard .cardTitle {
+  @apply text-black transition-all delay-200 duration-500 ease-linear;
+}
+
+.projectCard:hover .cardTitle,
+.cardButton:focus .cardTitle {
+  @apply text-navyBlue transition-all delay-200 duration-500 ease-linear;
 }
