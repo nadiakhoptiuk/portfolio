@@ -27,8 +27,8 @@ module.exports = {
 
       colors: {
         black: '#1A1A1A',
-        blue: '#7ED4FF',
-        navyBlue: '#4082CE',
+        // blue: '#7ED4FF',
+        navyBlue: '#33639F',
       },
 
       // backgroundImage: {
@@ -41,8 +41,8 @@ module.exports = {
       // },
 
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-        alata: ['Alata', 'sans-serif'],
+        sans: ['Roboto', 'sans-serif'],
+        playfair: ['Playfair Display', 'serif'],
       },
 
       fontSize: {

@@ -18,7 +18,7 @@ const Projects = ({ data }) => {
     <Section
       h2={blockTitle}
       id={blockAnchorId}
-      containerClassName="border-t-[1px]  border-black/50 pt-[64px]"
+      titleClassName="text-center after:left-1/2 after:translate-x-[-50%]"
     >
       <ul className="gap-y-18 grid grid-cols-3 gap-x-12 gap-y-24">
         {projects?.map(project => {
@@ -39,9 +39,11 @@ const Projects = ({ data }) => {
                   projectTitle={projectTitle}
                 />
 
-                <h3 className="cardTitle mb-6 text-big">{projectTitle}</h3>
+                <h3 className="cardTitle mb-6 font-playfair text-big">
+                  {projectTitle}
+                </h3>
 
-                <p className="text-small text-navyBlue">{stack}</p>
+                <p className="text-small font-thin text-navyBlue">{stack}</p>
               </button>
 
               {isModalOpen && id === openedModalId && (

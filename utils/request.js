@@ -15,7 +15,12 @@ const mainRequest = () => {
 
 const query = gql`
   query {
-    summary {
+    hero {
+      profession
+      heroImage
+      fullName
+    }
+    aboutMe {
       blockTitle
       blockAnchorId
       order

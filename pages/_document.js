@@ -8,7 +8,7 @@ export default function Document() {
         <meta name="theme-color" content="#fff" />
         <meta
           name="description"
-          content="Nadiia Khoptiuk - Full Stack Developer - portfolio"
+          content="Full Stack Developer Nadiia Khoptiuk's portfolio"
         />
 
         <link
@@ -47,31 +47,31 @@ export default function Document() {
           crossOrigin="true"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Alata&family=Inter:wght@300;500&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;900&family=Roboto&display=swap"
           rel="stylesheet"
         />
 
         <meta
           name="twitter:description"
-          content="Nadiia Khoptiuk - Full Stack Developer - portfolio"
+          content="Full Stack Developer Nadiia Khoptiuk's portfolio"
         />
         <meta
           name="twitter:title"
-          content="Nadiia Khoptiuk - Full Stack Developer - portfolio"
+          content="Full Stack Developer Nadiia Khoptiuk's portfolio"
         />
         <meta name="twitter:card" content="summary" />
 
-        {/* <meta property="og:image" content={'/image/cower.png'} /> */}
-        <meta property="og:image:width" content="968" />
-        <meta property="og:image:height" content="504" />
+        <meta property="og:image" content={'/preview.jpg'} />
+        <meta property="og:image:width" content="1267" />
+        <meta property="og:image:height" content="621" />
         <meta property="og:type" content="website" />
         <meta
           property="og:description"
-          content="Nadiia Khoptiuk - Full Stack Developer - portfolio"
+          content="Full Stack Developer Nadiia Khoptiuk's portfolio"
         />
         <meta
           property="og:title"
-          content="Nadiia Khoptiuk - Full Stack Developer - portfolio"
+          content="Full Stack Developer Nadiia Khoptiuk's portfolio"
         />
       </Head>
 

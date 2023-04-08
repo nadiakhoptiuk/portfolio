@@ -1,12 +1,13 @@
 import Head from 'next/head';
 import mainRequest from 'utils/request';
+import AboutMe from 'views/AboutMe/AboutMe';
 import Experience from 'views/Experience/Experience';
 import Hero from 'views/Hero/Hero';
 import Projects from 'views/Projects/Project';
 import Reviews from 'views/Reviews/Reviews';
 
 const Home = props => {
-  const { summaryData, contact, projects, works, reviews } = props;
+  const { hero, aboutMe, contact, projects, works, reviews } = props;
 
   return (
     <>
@@ -18,7 +19,9 @@ const Home = props => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
-      <Hero summaryData={summaryData} contact={contact} />
+      <Hero heroData={hero} />
+
+      <AboutMe summaryData={aboutMe} contact={contact} />
 
       <Experience data={works} />
 
@@ -42,8 +45,9 @@ export const getStaticProps = async () => {
 
   return {
     props: {
+      hero: data.hero,
       projects: data.featuredProject,
-      summaryData: data.summary,
+      aboutMe: data.aboutMe,
       contact: data.contact,
       works: data.workExperience,
       reviews: data.review,

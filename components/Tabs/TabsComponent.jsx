@@ -38,7 +38,7 @@ const TabsComponent = ({ data }) => {
             <Tab
               key={oneTab.id}
               label={oneTab.tabName}
-              className="w-[100%] rounded"
+              className="w-[100%] rounded "
             />
           );
         })}
@@ -47,7 +47,7 @@ const TabsComponent = ({ data }) => {
       {data?.map((oneTabPanel, index) => {
         return (
           <TabPanel key={oneTabPanel.id} value={value} index={index}>
-            <p className="mb-6 text-big">{oneTabPanel.position}</p>
+            <p className="mb-6 text-big font-thin">{oneTabPanel.position}</p>
 
             <span className="absolute top-0 right-0 text-small">
               {oneTabPanel.date}

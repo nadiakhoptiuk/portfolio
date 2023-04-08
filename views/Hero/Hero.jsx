@@ -1,46 +1,31 @@
-import Markdown from 'markdown-to-jsx';
 import Section from 'components/Section/Section';
 import Image from 'next/image';
-import ContactBtnList from 'components/ContactBtnList/ContactBtnList';
 
-const Hero = ({ summaryData, contact }) => {
-  const {
-    photo: { secure_url },
-    summary,
-    blockAnchorId,
-  } = summaryData;
+const Hero = ({ heroData }) => {
+  const { heroImage, profession, fullName } = heroData;
 
   return (
     <Section
       h1="Nadiia Khoptiuk"
-      titleClassName="visually-hidden"
-      id={blockAnchorId}
+      titleClassName="visually-hidden !m-0 !-mt-1"
+      className="mx-auto h-[647px] w-full max-w-[1440px] overflow-hidden !pt-0"
+      containerClassName="relative h-[547px] top-[3px]"
     >
-      <div className="flex justify-between">
-        <div className="pt-[100px]">
-          <p className="mb-9 text-big text-black">
-            Hello, I am a Full-Stack Developer
-          </p>
-
-          <p className="!leading=[113px] main-gradient mb-9 flex h-[113px] w-max items-center font-alata !text-[82px]">
-            Nadiia Khoptiuk
-          </p>
-
-          <div className="markdown-wrapper mb-16 text-[20px] leading-[28px] text-black prose-p:mb-9 xl:w-[600px]">
-            <Markdown>{summary}</Markdown>
-          </div>
-
-          <ContactBtnList data={contact} />
-        </div>
-
+      <div className="absolute left-1/2 !-translate-x-1/2 xl:h-[547px] xl:w-[1440px]">
         <Image
           alt="Nadiia Khoptiuk photo"
-          src={secure_url}
-          width={498}
-          height={773}
+          src={heroImage.secure_url}
+          width={1440}
+          height={547}
           priority
-          className="flex-grow-1 relative top-[-4px] rounded xl:h-[757px] xl:w-[481px]"
         />
+      </div>
+
+      <div className="absolute top-0 left-5 z-10 pt-[185px]">
+        <p className="mb-10 flex w-max items-center font-playfair !text-[68px] font-black !leading-[85px]">
+          {fullName}
+        </p>
+        <p className="font-sans text-big font-thin text-black">{profession}</p>
       </div>
     </Section>
   );
