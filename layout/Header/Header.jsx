@@ -16,7 +16,7 @@ export const Header = ({ data }) => {
   return (
     <header className="fixed top-0 left-0 z-10 w-[100%] bg-black max-xl:hidden">
       <Container className="container flex items-center justify-between">
-        <Link href="/" className="text-white">
+        <Link href="/" className="font-light text-white">
           N. Khoptiuk
         </Link>
 

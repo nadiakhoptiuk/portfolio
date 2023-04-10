@@ -47,7 +47,7 @@ export default function Document() {
           crossOrigin="true"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;900&family=Roboto&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;900&family=Roboto:wght@100;300;400;500&display=swap"
           rel="stylesheet"
         />
 
@@ -62,8 +62,8 @@ export default function Document() {
         <meta name="twitter:card" content="summary" />
 
         <meta property="og:image" content={'/preview.jpg'} />
-        <meta property="og:image:width" content="1267" />
-        <meta property="og:image:height" content="621" />
+        <meta property="og:image:width" content="903" />
+        <meta property="og:image:height" content="626" />
         <meta property="og:type" content="website" />
         <meta
           property="og:description"

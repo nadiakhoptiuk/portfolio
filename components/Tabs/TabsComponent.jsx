@@ -38,7 +38,7 @@ const TabsComponent = ({ data }) => {
             <Tab
               key={oneTab.id}
               label={oneTab.tabName}
-              className="w-[100%] rounded "
+              className="w-[100%] rounded"
             />
           );
         })}
@@ -47,7 +47,7 @@ const TabsComponent = ({ data }) => {
       {data?.map((oneTabPanel, index) => {
         return (
           <TabPanel key={oneTabPanel.id} value={value} index={index}>
-            <p className="mb-6 font-playfair text-big font-thin">
+            <p className="mb-6 font-playfair text-big !font-semibold">
               {oneTabPanel.position}
             </p>
 
@@ -66,7 +66,7 @@ const TabsComponent = ({ data }) => {
               autoHideTimeout={1000}
               autoHideDuration={200}
             >
-              <div className="prose w-[479px] prose-p:mt-0 prose-p:not-italic prose-li:mt-0 prose-li:mb-3 prose-li:text-black prose-li:marker:text-black">
+              <div className="prose w-[479px] prose-p:mt-0 prose-p:not-italic prose-blockquote:font-normal prose-li:mt-0 prose-li:mb-3 prose-li:text-black prose-li:marker:text-black">
                 <Markdown>{oneTabPanel.description}</Markdown>
               </div>
 

@@ -26,7 +26,7 @@ const AboutMe = ({ summaryData, contact }) => {
         <div className="ml-8 pt-[36px]">
           <h2 className="sectionTitle !mb-9">{blockTitle}</h2>
 
-          <div className="markdown-wrapper mb-16 text-[20px] leading-[28px] text-black prose-p:mb-9 xl:w-[582px]">
+          <div className="markdown-wrapper mb-16 text-[20px] font-normal leading-[28px] text-black prose-p:mb-9 xl:w-[582px]">
             <Markdown>{summary}</Markdown>
           </div>
 
