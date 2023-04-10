@@ -41,7 +41,7 @@ const Modal = ({
         transitionDuration={200}
         disableRestoreFocus
       >
-        <DialogActions className="absolute right-0 top-0 h-[64px]">
+        <DialogActions className="absolute right-0 top-0 h-[80px]">
           <Button autoFocus onClick={handleClose}>
             <CloseIcon />
           </Button>
@@ -49,18 +49,18 @@ const Modal = ({
 
         <DialogTitle
           id="modal-title"
-          className="font-playfair text-big font-medium"
+          className="!font-playfair text-big !font-semibold"
         >
           {projectTitle}
         </DialogTitle>
 
         <DialogContent dividers className="flex">
-          <div className="relative mr-9 h-[500px] w-[376px] shrink-0 overflow-hidden rounded">
+          <div className="relative mr-9 h-[420px] w-[376px] shrink-0 overflow-hidden rounded">
             <Image
               src={projectPreview?.secure_url}
               alt={`preview of ${projectTitle}`}
               width={376}
-              height={300}
+              height={420}
               quality={100}
               className="h-full w-full object-cover object-center"
             />

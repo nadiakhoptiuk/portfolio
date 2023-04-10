@@ -7,7 +7,7 @@
   }
 
   button {
-    @apply font-sans font-thin !text-inherit;
+    @apply font-sans font-extralight !text-inherit;
   }
 }
 
@@ -43,7 +43,7 @@ body {
 }
 
 .sectionTitle {
-  @apply relative mb-[64px] font-playfair text-[38px] font-black leading-[55px] after:absolute after:top-[-36px] after:left-0 after:h-[2px] after:w-[67px] after:bg-navyBlue after:content-[''];
+  @apply relative mb-[64px] font-playfair text-[38px] font-semibold leading-[55px] after:absolute after:top-[-36px] after:left-0 after:h-[2px] after:w-[67px] after:bg-navyBlue after:content-[''];
 }
 
 .typicalBtn {
@@ -72,11 +72,11 @@ body {
 }
 
 .MuiButtonBase-root.MuiTab-root {
-  @apply mb-1 h-[56px] w-[376px] max-w-[376px] items-start !rounded !border-2 border-navyBlue py-[18px] px-[16px] !font-sans !text-middle !font-thin capitalize last:mb-0;
+  @apply mb-1 h-[56px] w-[376px] max-w-[376px] items-start !rounded !border-2 border-navyBlue py-[18px] px-[16px] !font-sans !text-middle !font-normal capitalize last:mb-0;
 }
 
 .MuiButtonBase-root.Mui-selected {
-  @apply h-[56px] !rounded bg-black !text-white;
+  @apply h-[56px] !rounded bg-black  !text-white;
 }
 
 .MuiTabs-indicator {
@@ -89,11 +89,11 @@ body {
 }
 
 .MuiPaper-root.MuiDialog-paper {
-  @apply h-[100%] max-h-[700px] w-[100%] max-w-[100%] px-9 pt-10;
+  @apply h-[100%] max-h-[600px] w-[100%] max-w-[100%] px-4 py-4;
 }
 
 .MuiDialogContent-root {
-  @apply border-none;
+  @apply border-none !py-9;
 }
 
 /* Markdown */
@@ -130,8 +130,18 @@ body {
 
 /* Project Card */
 
-.projectCard {
-  @apply hover:cursor-pointer;
+.projectCardOverlay {
+  @apply transition-shadow duration-1000;
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(26, 26, 26, 0.64);
+  -moz-box-shadow: 0px 2px 5px 0px rgba(26, 26, 26, 0.64);
+  box-shadow: 0px 2px 5px 0px rgba(26, 26, 26, 0.64);
+}
+
+.projectCard:hover .projectCardOverlay {
+  @apply cursor-pointer transition-shadow duration-1000;
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(26, 26, 26, 1);
+  -moz-box-shadow: 0px 2px 5px 0px rgba(26, 26, 26, 1);
+  box-shadow: 0px 2px 5px 0px rgba(26, 26, 26, 1);
 }
 
 .projectCard .previewImg {

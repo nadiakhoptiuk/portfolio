@@ -26,7 +26,10 @@ const Projects = ({ data }) => {
             project;
 
           return (
-            <li key={id} className="projectCard flex flex-col justify-start">
+            <li
+              key={id}
+              className="projectCard flex flex-col justify-start rounded"
+            >
               <button
                 type="button"
                 onClick={() => handleModalOpen(id)}
@@ -39,11 +42,11 @@ const Projects = ({ data }) => {
                   projectTitle={projectTitle}
                 />
 
-                <h3 className="cardTitle mb-6 font-playfair text-big">
+                <h3 className="cardTitle mb-6 font-playfair text-big !font-semibold">
                   {projectTitle}
                 </h3>
 
-                <p className="text-small font-thin text-navyBlue">{stack}</p>
+                <p className="text-small font-normal text-navyBlue">{stack}</p>
               </button>
 
               {isModalOpen && id === openedModalId && (

@@ -22,10 +22,11 @@ const Hero = ({ heroData }) => {
       </div>
 
       <div className="absolute top-0 left-5 z-10 pt-[185px]">
-        <p className="mb-10 flex w-max items-center font-playfair !text-[68px] font-black !leading-[85px]">
+        <p className="mb-10 flex w-max items-center font-playfair !text-[68px] font-semibold !leading-[85px]">
           {fullName}
         </p>
-        <p className="font-sans text-big font-thin text-black">{profession}</p>
+
+        <p className="font-sans text-big font-light text-black">{profession}</p>
       </div>
     </Section>
   );
