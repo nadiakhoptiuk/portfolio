@@ -17,7 +17,7 @@ const NavBar = ({ anchors }) => {
                 smooth={true}
                 hashSpy={true}
                 duration={500}
-                className="cursor-pointer py-6 font-light text-white"
+                className="cursor-pointer py-6 font-light text-white md:text-small xl:text-middle"
                 activeClass="relative after:bg-white after:content-[''] after:w-full after:h-[1px] after:absolute after:bottom-[18px] after:left-0 py-6 "
               >
                 {title}

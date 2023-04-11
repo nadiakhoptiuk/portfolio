@@ -55,7 +55,7 @@ const Modal = ({
         </DialogTitle>
 
         <DialogContent dividers className="flex">
-          <div className="relative mr-9 h-[420px] w-[376px] shrink-0 overflow-hidden rounded">
+          <div className="relative shrink-0 overflow-hidden rounded md:mr-[32px] md:h-[360px] md:w-[260px] xl:mr-9 xl:h-[420px] xl:w-[376px]">
             <Image
               src={projectPreview?.secure_url}
               alt={`preview of ${projectTitle}`}

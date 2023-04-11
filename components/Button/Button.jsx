@@ -15,7 +15,9 @@ const Button = ({ className, title, link, isemail, isTitle = 'true' }) => {
           rel="nofollow noreferrer noopener"
         >
           <Email />
-          <span className="ml-[10px] text-middle">{title}</span>
+          <span className="ml-[10px] max-xl:hidden xl:text-middle">
+            {title}
+          </span>
         </a>
       )}
 
@@ -36,7 +38,11 @@ const Button = ({ className, title, link, isemail, isTitle = 'true' }) => {
             <YouTube className="!w-[39px !h-[39px]" />
           )}
 
-          {isTitle && <span className="ml-[10px] text-middle">{title}</span>}
+          {isTitle && (
+            <span className="ml-[10px] max-xl:hidden xl:text-middle ">
+              {title}
+            </span>
+          )}
         </a>
       )}
     </>

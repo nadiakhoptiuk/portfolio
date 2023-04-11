@@ -39,11 +39,11 @@ body {
 }
 
 .section {
-  @apply pb-[100px] pt-[36px] max-xl:hidden;
+  @apply pt-[36px] md:pb-[64px] xl:pb-[100px];
 }
 
 .sectionTitle {
-  @apply relative mb-[64px] font-playfair text-[38px] font-semibold leading-[55px] after:absolute after:top-[-36px] after:left-0 after:h-[2px] after:w-[67px] after:bg-navyBlue after:content-[''];
+  @apply relative font-playfair text-[38px] font-semibold leading-[55px] after:absolute after:left-0 after:h-[2px] after:bg-navyBlue after:content-[''] md:mb-10 md:text-big md:after:top-[-24px] md:after:w-8 xl:mb-[64px] xl:after:top-[-36px] xl:after:w-[67px];
 }
 
 .typicalBtn {
@@ -56,11 +56,11 @@ body {
 
 /* MUI TABS*/
 .MuiTabs-flexContainer {
-  @apply !w-[376px];
+  @apply md:w-[244px] xl:w-[376px];
 }
 
 .mainTabsRoot {
-  @apply mr-[139px] !shrink-0;
+  @apply !shrink-0 md:mr-8 xl:mr-[139px];
 }
 
 .Mui-focusVisible .MuiTouchRipple-root {
@@ -72,11 +72,11 @@ body {
 }
 
 .MuiButtonBase-root.MuiTab-root {
-  @apply mb-1 h-[56px] w-[376px] max-w-[376px] items-start !rounded !border-2 border-navyBlue py-[18px] px-[16px] !font-sans !text-middle !font-normal capitalize last:mb-0;
+  @apply mb-1 h-[56px] max-w-[376px] items-start !rounded !border-2 border-navyBlue py-[18px] px-[16px] !font-sans font-normal capitalize last:mb-0 md:w-[244px] md:text-small xl:w-[376px] xl:text-middle;
 }
 
 .MuiButtonBase-root.Mui-selected {
-  @apply h-[56px] !rounded bg-black  !text-white;
+  @apply h-[56px] !rounded bg-black !text-white;
 }
 
 .MuiTabs-indicator {
@@ -85,7 +85,7 @@ body {
 
 /* MUI MODAL*/
 .MuiDialog-container {
-  @apply mx-auto w-[994px];
+  @apply mx-auto md:w-[704px] xl:w-[994px];
 }
 
 .MuiPaper-root.MuiDialog-paper {
