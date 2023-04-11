@@ -39,7 +39,11 @@ const Button = ({ className, title, link, isemail, isTitle = 'true' }) => {
           )}
 
           {isTitle && (
-            <span className="ml-[10px] max-xl:hidden xl:text-middle ">
+            <span
+              className={`ml-[10px]  xl:text-middle ${
+                title === 'Live page' ? '' : 'max-xl:hidden'
+              }`}
+            >
               {title}
             </span>
           )}

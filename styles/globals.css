@@ -47,7 +47,7 @@ body {
 }
 
 .typicalBtn {
-  @apply flex h-[100%] w-[100%] items-center justify-center  bg-white transition-colors duration-300 hover:bg-navyBlue hover:text-white  focus:bg-navyBlue focus:text-white;
+  @apply flex h-[100%] w-[100%] items-center justify-center bg-white transition-colors duration-300 hover:bg-navyBlue hover:text-white  focus:bg-navyBlue focus:text-white;
 }
 
 .typicalBtn > svg {
@@ -68,7 +68,7 @@ body {
 }
 
 .MuiBox-root {
-  @apply h-[350px] overflow-y-auto;
+  @apply md:!h-[358px] xl:!h-[375px];
 }
 
 .MuiButtonBase-root.MuiTab-root {
@@ -89,11 +89,15 @@ body {
 }
 
 .MuiPaper-root.MuiDialog-paper {
-  @apply h-[100%] max-h-[600px] w-[100%] max-w-[100%] px-4 py-4;
+  @apply h-[100%] max-h-[600px] w-[100%] max-w-[100%] px-4 pt-4 pb-6;
 }
 
 .MuiDialogContent-root {
-  @apply border-none !py-9;
+  @apply border-none md:py-6 xl:!py-9;
+}
+
+.MuiDialogTitle-root {
+  @apply md:!py-2 xl:!py-4;
 }
 
 /* Markdown */

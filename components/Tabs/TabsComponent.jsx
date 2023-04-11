@@ -51,10 +51,6 @@ const TabsComponent = ({ data }) => {
               {oneTabPanel.position}
             </p>
 
-            <span className="absolute top-0 right-0 text-small md:font-light">
-              {oneTabPanel.date}
-            </span>
-
             <p className="mb-6 text-small !text-navyBlue xl:text-middle">
               {oneTabPanel.blueText}
             </p>
@@ -66,21 +62,25 @@ const TabsComponent = ({ data }) => {
               autoHideTimeout={1000}
               autoHideDuration={200}
             >
-              <div className="prose prose-p:mt-0 prose-p:not-italic prose-blockquote:font-normal prose-li:mt-0 prose-li:mb-3 prose-li:text-black prose-li:marker:text-black md:w-[428px] xl:w-[479px]">
+              <div className="prose prose-p:mt-0 prose-p:not-italic prose-blockquote:font-normal prose-li:mt-0 prose-li:text-black prose-li:marker:text-black md:w-[408px] md:prose-li:mb-2 xl:!w-[560px] xl:prose-li:mb-3">
                 <Markdown>{oneTabPanel.description}</Markdown>
               </div>
-
-              {oneTabPanel?.source && (
-                <a
-                  href={oneTabPanel.source}
-                  rel="nofollow noreferrer noopener"
-                  target="_blank"
-                  className="text-small underline md:font-light"
-                >
-                  Source
-                </a>
-              )}
             </Scrollbars>
+
+            <span className="absolute bottom-0 right-0 text-small md:font-light">
+              {oneTabPanel.date}
+            </span>
+
+            {oneTabPanel?.source && (
+              <a
+                href={oneTabPanel.source}
+                rel="nofollow noreferrer noopener"
+                target="_blank"
+                className="absolute bottom-0 left-0 text-small underline md:font-light"
+              >
+                Source
+              </a>
+            )}
           </TabPanel>
         );
       })}

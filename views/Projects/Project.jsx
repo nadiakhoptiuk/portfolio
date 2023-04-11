@@ -42,7 +42,7 @@ const Projects = ({ data }) => {
                   projectTitle={projectTitle}
                 />
 
-                <h3 className="cardTitle font-playfair !font-semibold md:mb-4 md:text-[20px] xl:mb-6 xl:text-big">
+                <h3 className="cardTitle font-playfair !font-semibold md:mb-4 md:text-[20px] md:leading-7 xl:mb-6 xl:text-big">
                   {projectTitle}
                 </h3>
 
