@@ -18,7 +18,7 @@ export const Header = ({ data }) => {
       <Container className="container flex items-center justify-between">
         <Link
           href="/"
-          className="font-light text-white md:text-small xl:text-big"
+          className="font-light text-white md:text-small xl:text-middle"
         >
           N. Khoptiuk
         </Link>

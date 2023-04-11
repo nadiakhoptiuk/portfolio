@@ -39,11 +39,11 @@ body {
 }
 
 .section {
-  @apply pt-[36px] md:pb-[64px] xl:pb-[100px];
+  @apply md:pb-[64px] md:pt-[24px] xl:pt-[36px] xl:pb-[100px];
 }
 
 .sectionTitle {
-  @apply relative font-playfair text-[38px] font-semibold leading-[55px] after:absolute after:left-0 after:h-[2px] after:bg-navyBlue after:content-[''] md:mb-10 md:text-big md:after:top-[-24px] md:after:w-8 xl:mb-[64px] xl:after:top-[-36px] xl:after:w-[67px];
+  @apply relative font-playfair font-semibold after:absolute after:left-0 after:h-[2px] after:bg-navyBlue after:content-[''] md:mb-10 md:text-big md:after:top-[-24px] md:after:w-8 xl:mb-[64px] xl:text-[32px] xl:leading-[45px] xl:after:top-[-36px] xl:after:w-[67px];
 }
 
 .typicalBtn {

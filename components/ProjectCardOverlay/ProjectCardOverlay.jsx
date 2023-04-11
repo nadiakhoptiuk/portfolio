@@ -23,7 +23,7 @@ const ProjectCardOverlay = ({ projectPreview, projectTitle, tag, icon }) => {
           alt={`preview of ${projectTitle}`}
           width={200}
           height={180}
-          className="projectLogo md:h-[100px] md:w-[120px] xl:h-[180px] xl:w-[200px]"
+          className="projectLogo md:h-[130px] md:w-[160px]"
         />
       </div>
     </div>
