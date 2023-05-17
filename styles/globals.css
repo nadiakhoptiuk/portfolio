@@ -39,11 +39,11 @@ body {
 }
 
 .section {
-  @apply md:pb-[64px] md:pt-[24px] xl:pt-[36px] xl:pb-[100px];
+  @apply pb-10 md:pb-[64px] md:pt-[24px] xl:pt-[36px] xl:pb-[100px];
 }
 
 .sectionTitle {
-  @apply relative font-playfair font-semibold after:absolute after:left-0 after:h-[2px] after:bg-navyBlue after:content-[''] md:mb-10 md:text-big md:after:top-[-24px] md:after:w-8 xl:mb-[64px] xl:text-[32px] xl:leading-[45px] xl:after:top-[-36px] xl:after:w-[67px];
+  @apply relative mb-4 font-playfair text-[20px] font-semibold leading-[30px] after:absolute after:left-0 after:top-[-24px] after:h-[2px] after:w-8 after:bg-navyBlue after:content-[''] md:mb-10 md:text-big md:after:top-[-24px] md:after:w-8 xl:mb-[64px] xl:text-[32px] xl:leading-[45px] xl:after:top-[-36px] xl:after:w-[67px];
 }
 
 .typicalBtn {
@@ -98,6 +98,10 @@ body {
 
 .MuiDialogTitle-root {
   @apply md:!py-2 xl:!py-4;
+}
+
+.menu .MuiPaper-root.MuiDialog-paper {
+  @apply !max-h-full bg-black;
 }
 
 /* Markdown */

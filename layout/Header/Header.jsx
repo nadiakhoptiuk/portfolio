@@ -1,8 +1,17 @@
+import { useEffect, useState } from 'react';
+import dynamic from 'next/dynamic.js';
+import Link from 'next/link';
+import { useMediaQuery } from 'react-responsive';
 import Container from 'components/Container/Container';
 import NavBar from 'components/NavBar/NavBar';
-import Link from 'next/link';
+
+const MobileMenu = dynamic(() =>
+  import('../../components/MobileMenu/MobileMenu'),
+);
 
 export const Header = ({ data }) => {
+  const [isBurgerShown, setIsBurgerShown] = useState(false);
+  const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
   const keys = Object.values(data);
 
   const anchors = keys
@@ -13,17 +22,30 @@ export const Header = ({ data }) => {
 
   const sortedAnchors = [...anchors].sort((a, b) => a.order - b.order);
 
+  useEffect(() => {
+    isMobile && setIsBurgerShown(true);
+    !isMobile && setIsBurgerShown(false);
+  }, [isMobile]);
+
   return (
     <header className="fixed top-0 left-0 z-20 h-[70px] w-[100%] bg-black">
-      <Container className="container flex items-center justify-between">
+      <Container className="container flex h-full items-center justify-between">
         <Link
           href="/"
-          className="font-light text-white md:text-small xl:text-middle"
+          className="text-small font-light text-white xl:text-middle"
         >
           N. Khoptiuk
         </Link>
 
-        <NavBar anchors={sortedAnchors} />
+        {!isBurgerShown && (
+          <NavBar
+            anchors={sortedAnchors}
+            orientation="horizontal"
+            menu="false"
+          />
+        )}
+
+        {isBurgerShown && <MobileMenu anchors={sortedAnchors} />}
       </Container>
     </header>
   );

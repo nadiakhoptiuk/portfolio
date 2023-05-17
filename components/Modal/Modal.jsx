@@ -49,7 +49,7 @@ const Modal = ({
 
         <DialogTitle
           id="modal-title"
-          className="!font-playfair text-big !font-semibold"
+          className="!font-playfair !font-semibold md:text-big xl:text-[32px] xl:leading-[45px]"
         >
           {projectTitle}
         </DialogTitle>

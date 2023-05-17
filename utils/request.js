@@ -68,6 +68,7 @@ const query = gql`
           link
           title
         }
+        projectType
       }
     }
     review {

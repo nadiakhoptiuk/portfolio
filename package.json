@@ -29,6 +29,7 @@
     "react-custom-scrollbars-2": "^4.5.0",
     "react-dom": "18.2.0",
     "react-loader-spinner": "^5.3.4",
+    "react-responsive": "^9.0.2",
     "react-scroll": "^1.8.9"
   },
   "devDependencies": {
