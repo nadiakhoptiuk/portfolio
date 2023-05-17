@@ -4,12 +4,12 @@ const ContactBtnList = ({ data }) => {
   const { contactLink } = data;
 
   return (
-    <ul className="grid w-max grid-cols-3 md:gap-[10px] xl:gap-[12px]">
+    <ul className="grid w-max grid-cols-3 gap-[10px] max-md:mx-auto max-md:mb-10 xl:gap-[12px]">
       {contactLink?.map(({ id, link, title, isemail }) => {
         return (
           <li
             key={id}
-            className="flex items-center justify-center rounded border-2 border-navyBlue md:h-[50px] md:w-[50px] xl:h-[55px] xl:w-[200px]"
+            className="flex h-[50px] w-[50px] items-center justify-center rounded border border-navyBlue xl:h-[55px] xl:w-[200px]"
           >
             <Button
               className="typicalBtn"

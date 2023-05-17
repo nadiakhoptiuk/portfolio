@@ -1,31 +1,39 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useMediaQuery } from 'react-responsive';
+import { Scrollbars } from 'react-custom-scrollbars-2';
+import Markdown from 'markdown-to-jsx';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
-import Markdown from 'markdown-to-jsx';
-import { Scrollbars } from 'react-custom-scrollbars-2';
 import TabPanel from './TabPanel';
 
 const TabsComponent = ({ data }) => {
   const [value, setValue] = useState(0);
+  const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
+  const [display, setDisplay] = useState(null);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
 
+  useEffect(() => {
+    isMobile && setDisplay('block');
+    !isMobile && setDisplay('flex');
+  }, [isMobile]);
+
   return (
     <Box
       sx={{
-        display: 'flex',
+        display: display,
         height: 'auto',
       }}
     >
       <Tabs
-        orientation="vertical"
+        orientation={isMobile ? 'horizontal' : 'vertical'}
         variant="scrollable"
         value={value}
         onChange={handleChange}
-        aria-label="Vertical tabs"
+        aria-label="Tabs"
         classes={{ root: 'mainTabsRoot' }}
         indicatorColor="transparent"
         sx={{
@@ -38,7 +46,7 @@ const TabsComponent = ({ data }) => {
             <Tab
               key={oneTab.id}
               label={oneTab.tabName}
-              className="w-[100%] rounded"
+              className="rounded md:w-[100%]"
             />
           );
         })}
