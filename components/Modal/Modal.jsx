@@ -49,13 +49,13 @@ const Modal = ({
 
         <DialogTitle
           id="modal-title"
-          className="!font-playfair text-big !font-semibold"
+          className="!font-playfair !font-semibold md:text-big xl:text-[32px] xl:leading-[45px]"
         >
           {projectTitle}
         </DialogTitle>
 
-        <DialogContent dividers className="flex">
-          <div className="relative mr-9 h-[420px] w-[376px] shrink-0 overflow-hidden rounded">
+        <DialogContent dividers className="md:flex">
+          <div className="relative shrink-0 overflow-hidden rounded max-md:mb-5 md:mr-[32px] md:h-[360px] md:w-[260px] xl:mr-9 xl:h-[420px] xl:w-[376px]">
             <Image
               src={projectPreview?.secure_url}
               alt={`preview of ${projectTitle}`}
@@ -79,9 +79,9 @@ const Modal = ({
           </div>
 
           <div className="flex flex-col">
-            <p className="mb-6 text-small">{description}</p>
+            <p className="mb-4 text-small md:mb-6">{description}</p>
 
-            <p className="mb-9 text-small text-navyBlue">{stack}</p>
+            <p className="mb-5 text-small text-navyBlue md:mb-9">{stack}</p>
 
             <ProjectTypeInfo role={role} isCommand={isCommand} />
 

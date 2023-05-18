@@ -1,35 +1,47 @@
-import { useState } from 'react';
-import Tabs from '@mui/material/Tabs';
+import { useState, useEffect } from 'react';
+import { useMediaQuery } from 'react-responsive';
+import { Scrollbars } from 'react-custom-scrollbars-2';
+import Markdown from 'markdown-to-jsx';
+import Tabs, { tabsClasses } from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
-import Markdown from 'markdown-to-jsx';
-import { Scrollbars } from 'react-custom-scrollbars-2';
 import TabPanel from './TabPanel';
 
 const TabsComponent = ({ data }) => {
   const [value, setValue] = useState(0);
+  const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
+  const [display, setDisplay] = useState(null);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
 
+  useEffect(() => {
+    isMobile && setDisplay('block');
+    !isMobile && setDisplay('flex');
+  }, [isMobile]);
+
   return (
     <Box
       sx={{
-        display: 'flex',
+        display: display,
         height: 'auto',
       }}
     >
       <Tabs
-        orientation="vertical"
+        orientation={isMobile ? 'horizontal' : 'vertical'}
         variant="scrollable"
+        scrollButtons
         value={value}
         onChange={handleChange}
-        aria-label="Vertical tabs"
+        aria-label="Tabs"
         classes={{ root: 'mainTabsRoot' }}
         indicatorColor="transparent"
         sx={{
           borderRight: 0,
+          [`& .${tabsClasses.scrollButtons}`]: {
+            '&.Mui-disabled': { opacity: 0.15 },
+          },
         }}
         centered={false}
       >
@@ -38,7 +50,7 @@ const TabsComponent = ({ data }) => {
             <Tab
               key={oneTab.id}
               label={oneTab.tabName}
-              className="w-[100%] rounded"
+              className="rounded md:w-[100%]"
             />
           );
         })}
@@ -47,15 +59,11 @@ const TabsComponent = ({ data }) => {
       {data?.map((oneTabPanel, index) => {
         return (
           <TabPanel key={oneTabPanel.id} value={value} index={index}>
-            <p className="mb-6 font-playfair text-big !font-semibold">
+            <p className="mb-6 font-playfair !font-semibold md:text-middle xl:text-big">
               {oneTabPanel.position}
             </p>
 
-            <span className="absolute top-0 right-0 text-small">
-              {oneTabPanel.date}
-            </span>
-
-            <p className="mb-6 text-small !text-navyBlue">
+            <p className="mb-6 text-small !text-navyBlue xl:text-middle">
               {oneTabPanel.blueText}
             </p>
 
@@ -66,21 +74,25 @@ const TabsComponent = ({ data }) => {
               autoHideTimeout={1000}
               autoHideDuration={200}
             >
-              <div className="prose w-[479px] prose-p:mt-0 prose-p:not-italic prose-blockquote:font-normal prose-li:mt-0 prose-li:mb-3 prose-li:text-black prose-li:marker:text-black">
+              <div className="prose prose-p:mt-0 prose-p:not-italic prose-blockquote:font-normal prose-li:mt-0 prose-li:text-black prose-li:marker:text-black md:w-[408px] md:prose-li:mb-2 xl:!w-[560px] xl:prose-li:mb-3">
                 <Markdown>{oneTabPanel.description}</Markdown>
               </div>
-
-              {oneTabPanel?.source && (
-                <a
-                  href={oneTabPanel.source}
-                  rel="nofollow noreferrer noopener"
-                  target="_blank"
-                  className="text-small underline"
-                >
-                  Source
-                </a>
-              )}
             </Scrollbars>
+
+            <span className="absolute bottom-0 right-0 text-small md:font-light">
+              {oneTabPanel.date}
+            </span>
+
+            {oneTabPanel?.source && (
+              <a
+                href={oneTabPanel.source}
+                rel="nofollow noreferrer noopener"
+                target="_blank"
+                className="absolute bottom-0 left-0 text-small underline md:font-light"
+              >
+                Source
+              </a>
+            )}
           </TabPanel>
         );
       })}

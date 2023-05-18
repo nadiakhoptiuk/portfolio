@@ -13,15 +13,30 @@ const Section = ({
 }) => {
   return (
     <section className={classNames('section', className)} id={id || ''}>
-      <Container className={classNames('container', containerClassName)}>
+      <Container
+        className={classNames(
+          'container',
+          `${containerClassName ? containerClassName : ''}`,
+        )}
+      >
         {h1 && (
-          <h1 className={classNames('sectionTitle', `${titleClassName}`)}>
+          <h1
+            className={classNames(
+              'sectionTitle',
+              `${titleClassName ? titleClassName : ''}`,
+            )}
+          >
             {h1}
           </h1>
         )}
 
         {h2 && (
-          <h2 className={classNames('sectionTitle', `${titleClassName}`)}>
+          <h2
+            className={classNames(
+              'sectionTitle',
+              `${titleClassName ? titleClassName : ''}`,
+            )}
+          >
             {h2}
           </h2>
         )}
