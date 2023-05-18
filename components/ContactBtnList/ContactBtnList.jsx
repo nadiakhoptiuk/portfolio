@@ -9,7 +9,7 @@ const ContactBtnList = ({ data }) => {
         return (
           <li
             key={id}
-            className="flex h-[50px] w-[50px] items-center justify-center rounded border border-navyBlue xl:h-[55px] xl:w-[200px]"
+            className="transitions-colors flex h-[50px] w-[50px] items-center justify-center rounded border border-transparentBlue duration-300 hover:border-navyBlue xl:h-[55px] xl:w-[200px]"
           >
             <Button
               className="typicalBtn"

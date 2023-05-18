@@ -59,7 +59,7 @@ body {
 }
 
 .filterButton {
-  @apply text-middle font-light xl:font-normal;
+  @apply cursor-pointer text-middle font-light xl:font-normal;
 }
 
 .filterButtonActiveItem {
@@ -67,7 +67,7 @@ body {
 }
 
 .filterButtonActive {
-  @apply text-middle font-light xl:font-normal;
+  @apply cursor-pointer text-middle font-light xl:font-normal;
 }
 
 /* MUI TABS*/
@@ -96,11 +96,13 @@ body {
 }
 
 .MuiButtonBase-root.MuiTab-root {
-  @apply h-[56px] min-w-[125px] max-w-[376px] items-start !rounded !border-2 border-navyBlue py-[18px] px-[16px] !font-sans font-normal capitalize last:mb-0 max-md:flex max-md:items-center md:mb-1 md:w-[244px] md:text-small xl:w-[376px] xl:text-middle;
+  @apply h-[56px] min-w-[125px] max-w-[376px] items-start !rounded py-[18px] px-[16px] !font-sans text-small font-light capitalize last:mb-0 last:mr-0 max-md:mr-[8px] max-md:flex max-md:items-center md:mb-1 md:w-[244px] md:font-normal xl:w-[376px] xl:text-middle;
+  border: 1px solid rgba(51, 99, 159, 0.5) !important;
 }
 
 .MuiButtonBase-root.Mui-selected {
-  @apply h-[56px] !rounded bg-black !text-white;
+  @apply h-[56px] !rounded bg-black !font-light !text-white;
+  border: 1px solid #1a1a1a !important;
 }
 
 /* MUI MODAL*/

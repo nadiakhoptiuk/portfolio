@@ -74,12 +74,12 @@ const TabsComponent = ({ data }) => {
               autoHideTimeout={1000}
               autoHideDuration={200}
             >
-              <div className="prose prose-p:mt-0 prose-p:not-italic prose-blockquote:font-normal prose-li:mt-0 prose-li:text-black prose-li:marker:text-black md:w-[408px] md:prose-li:mb-2 xl:!w-[560px] xl:prose-li:mb-3">
+              <div className="prose prose-p:mt-0 prose-p:not-italic prose-blockquote:font-light prose-li:mt-0 prose-li:font-light prose-li:text-black prose-li:marker:text-black md:w-[408px] md:prose-li:mb-2 xl:!w-[560px] xl:prose-blockquote:font-normal xl:prose-li:mb-3 xl:prose-li:font-normal">
                 <Markdown>{oneTabPanel.description}</Markdown>
               </div>
             </Scrollbars>
 
-            <span className="absolute bottom-0 right-0 text-little md:text-small md:font-light">
+            <span className="absolute bottom-0 right-0 text-little font-light md:text-small">
               {oneTabPanel.date}
             </span>
 
