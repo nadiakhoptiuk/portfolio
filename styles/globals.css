@@ -43,7 +43,7 @@ body {
 }
 
 .sectionTitle {
-  @apply relative mb-6 font-playfair text-[20px] font-semibold leading-[30px] after:absolute after:left-0 after:top-[-22px] after:h-[2px] after:w-8 after:bg-navyBlue after:content-[''] md:mb-10 md:text-big md:after:top-[-22px] md:after:w-8 xl:mb-[64px] xl:text-[32px] xl:leading-[45px] xl:after:top-[-36px] xl:after:w-[67px];
+  @apply relative mb-6 font-playfair text-[22px] font-semibold leading-[30px] after:absolute after:left-0 after:top-[-24px] after:h-[1px] after:w-8 after:bg-navyBlue after:content-[''] md:mb-10 md:text-big md:after:w-8 xl:mb-[64px] xl:text-[32px] xl:leading-[45px] xl:after:top-[-36px] xl:after:w-[67px];
 }
 
 .typicalBtn {
@@ -52,6 +52,22 @@ body {
 
 .typicalBtn > svg {
   fill: currentColor;
+}
+
+.filterButtonItem {
+  @apply relative text-black transition-colors duration-300 after:absolute after:left-0 after:bottom-0 after:h-[1px] after:w-full after:bg-white after:content-[''] hover:text-navyBlue hover:after:bg-navyBlue focus:text-navyBlue;
+}
+
+.filterButton {
+  @apply text-middle font-light xl:font-normal;
+}
+
+.filterButtonActiveItem {
+  @apply relative text-middle font-light text-navyBlue transition-colors duration-300 after:absolute after:left-0 after:bottom-0 after:h-[1px] after:w-full after:bg-navyBlue after:content-[''] xl:font-normal;
+}
+
+.filterButtonActive {
+  @apply text-middle font-light xl:font-normal;
 }
 
 /* MUI TABS*/

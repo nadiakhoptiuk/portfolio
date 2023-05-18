@@ -31,15 +31,6 @@ module.exports = {
         navyBlue: '#33639F',
       },
 
-      // backgroundImage: {
-      //   first:
-      //     'background-image: linear-gradient(180deg, #4082ce 0%, #7ed4ff 100%);',
-      //   second:
-      //     'background-image: linear-gradient(180deg, #6FAEFF 0%, #DD5789 100%);',
-      //   third:
-      //     'background-image: linear-gradient(180deg, #DD5789 0%, #FC95E5 100%);',
-      // },
-
       fontFamily: {
         sans: ['Roboto', 'sans-serif'],
         playfair: ['Playfair Display', 'serif'],
