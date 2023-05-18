@@ -39,7 +39,7 @@ const MobileMenu = ({ anchors }) => {
             autoFocus
             onClick={handleClose}
             size="medium"
-            className="!absolute right-[20px] top-0"
+            className="!absolute right-[20px] top-[15px]"
             aria-label="close menu button"
           >
             <CloseIcon color="primary" />

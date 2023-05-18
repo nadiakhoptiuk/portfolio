@@ -63,6 +63,14 @@ body {
   @apply !shrink-0 max-md:mb-8 md:mr-8 xl:mr-[139px];
 }
 
+.MuiTabs-indicator {
+  @apply !w-0;
+}
+
+.MuiTabs-root .MuiTabs-scrollButtons {
+  @apply max-md:!flex md:!hidden;
+}
+
 .Mui-focusVisible .MuiTouchRipple-root {
   @apply border-2 border-black;
 }
@@ -77,10 +85,6 @@ body {
 
 .MuiButtonBase-root.Mui-selected {
   @apply h-[56px] !rounded bg-black !text-white;
-}
-
-.MuiTabs-indicator {
-  @apply !w-0;
 }
 
 /* MUI MODAL*/
@@ -101,7 +105,7 @@ body {
 }
 
 .menu .MuiPaper-root.MuiDialog-paper {
-  @apply !max-h-full bg-black;
+  @apply !max-h-full bg-black p-0;
 }
 
 /* Markdown */

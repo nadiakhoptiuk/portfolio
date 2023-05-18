@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { Scrollbars } from 'react-custom-scrollbars-2';
 import Markdown from 'markdown-to-jsx';
-import Tabs from '@mui/material/Tabs';
+import Tabs, { tabsClasses } from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import TabPanel from './TabPanel';
@@ -31,6 +31,7 @@ const TabsComponent = ({ data }) => {
       <Tabs
         orientation={isMobile ? 'horizontal' : 'vertical'}
         variant="scrollable"
+        scrollButtons
         value={value}
         onChange={handleChange}
         aria-label="Tabs"
@@ -38,6 +39,9 @@ const TabsComponent = ({ data }) => {
         indicatorColor="transparent"
         sx={{
           borderRight: 0,
+          [`& .${tabsClasses.scrollButtons}`]: {
+            '&.Mui-disabled': { opacity: 0.15 },
+          },
         }}
         centered={false}
       >
