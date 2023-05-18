@@ -79,7 +79,7 @@ const TabsComponent = ({ data }) => {
               </div>
             </Scrollbars>
 
-            <span className="absolute bottom-0 right-0 text-small md:font-light">
+            <span className="absolute bottom-0 right-0 text-little md:text-small md:font-light">
               {oneTabPanel.date}
             </span>
 
@@ -88,7 +88,7 @@ const TabsComponent = ({ data }) => {
                 href={oneTabPanel.source}
                 rel="nofollow noreferrer noopener"
                 target="_blank"
-                className="absolute bottom-0 left-0 text-small underline md:font-light"
+                className="absolute bottom-0 left-0 text-little underline md:text-small md:font-light"
               >
                 Source
               </a>
