@@ -39,15 +39,15 @@ body {
 }
 
 .section {
-  @apply pb-10 pt-[24px] md:pb-[64px] xl:pt-[36px] xl:pb-[100px];
+  @apply pt-[24px] pb-[54px] md:pb-[64px] xl:pt-[36px] xl:pb-[100px];
 }
 
 .sectionTitle {
-  @apply relative mb-6 font-playfair text-[20px] font-semibold leading-[30px] after:absolute after:left-0 after:top-[-24px] after:h-[2px] after:w-8 after:bg-navyBlue after:content-[''] md:mb-10 md:text-big md:after:top-[-24px] md:after:w-8 xl:mb-[64px] xl:text-[32px] xl:leading-[45px] xl:after:top-[-36px] xl:after:w-[67px];
+  @apply relative mb-6 font-playfair text-[20px] font-semibold leading-[30px] after:absolute after:left-0 after:top-[-22px] after:h-[2px] after:w-8 after:bg-navyBlue after:content-[''] md:mb-10 md:text-big md:after:top-[-22px] md:after:w-8 xl:mb-[64px] xl:text-[32px] xl:leading-[45px] xl:after:top-[-36px] xl:after:w-[67px];
 }
 
 .typicalBtn {
-  @apply flex h-[100%] w-[100%] items-center justify-center rounded bg-white transition-colors duration-300 hover:bg-navyBlue  hover:text-white focus:bg-navyBlue focus:text-white;
+  @apply flex h-[100%] w-[100%] items-center justify-center rounded-[2px] bg-white transition-colors duration-300 hover:bg-navyBlue hover:text-white focus:bg-navyBlue focus:text-white;
 }
 
 .typicalBtn > svg {
@@ -166,7 +166,7 @@ body {
 
 .projectCard:hover .previewImg,
 .cardButton:focus .previewImg {
-  @apply scale-110 transition-all delay-200 duration-700 ease-linear;
+  @apply scale-100 transition-all delay-200 duration-700 ease-linear md:scale-110;
 }
 
 .projectCard .overlay {
@@ -175,7 +175,7 @@ body {
 
 .projectCard:hover .overlay,
 .cardButton:focus .overlay {
-  @apply opacity-70 transition-all delay-200 duration-700 ease-linear;
+  @apply opacity-50 transition-all delay-200 duration-700 ease-linear md:opacity-70;
 }
 
 .projectCard .projectLogo {
@@ -184,7 +184,7 @@ body {
 
 .projectCard:hover .projectLogo,
 .cardButton:focus .projectLogo {
-  @apply scale-90 transition-all delay-200 duration-700 ease-linear;
+  @apply scale-100 transition-all delay-200 duration-700 ease-linear md:scale-90;
 }
 
 .projectCard .tag {
@@ -193,7 +193,7 @@ body {
 
 .projectCard:hover .tag,
 .cardButton:focus .tag {
-  @apply translate-x-5 transition-all delay-200 duration-700 ease-linear;
+  @apply translate-x-0 transition-all delay-200 duration-700 ease-linear md:translate-x-5;
 }
 
 .projectCard .cardTitle {
@@ -202,5 +202,5 @@ body {
 
 .projectCard:hover .cardTitle,
 .cardButton:focus .cardTitle {
-  @apply text-navyBlue transition-all delay-200 duration-500 ease-linear;
+  @apply text-black transition-all delay-200 duration-500 ease-linear md:text-navyBlue;
 }
