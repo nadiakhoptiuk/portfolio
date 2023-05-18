@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react';
+import { useState } from 'react';
 import Section from 'components/Section/Section';
 import ProjectCardOverlay from 'components/ProjectCardOverlay/ProjectCardOverlay';
 import Modal from 'components/Modal/Modal';
@@ -14,8 +14,6 @@ const Projects = ({ data }) => {
   const [isBtnShowMoreShown, setIsBtnShowMoreShown] = useState(false);
   const [filter, setFilter] = useState(null);
 
-  console.log(filter);
-
   const handleCheckQuantity = array => {
     if (array.length <= 6) {
       setFilteredProjects(array);
@@ -26,22 +24,19 @@ const Projects = ({ data }) => {
     }
   };
 
-  const handleFilter = useCallback(() => {
-    const projectsOfType = projects.filter(
-      ({ projectType }) => projectType === filter,
-    );
-
-    handleCheckQuantity(projectsOfType);
-  }, [filter, projects]);
-
   useEffect(() => {
     if (filter === null) {
-      // handleFilterAll();
       handleCheckQuantity(projects);
-    } else {
-      handleFilter();
     }
-  }, [filter, handleFilter, projects]);
+
+    if (filter !== null) {
+      const projectsOfType = projects.filter(
+        ({ projectType }) => projectType === filter,
+      );
+
+      handleCheckQuantity(projectsOfType);
+    }
+  }, [filter, projects]);
 
   const handleModalOpen = id => {
     setIsModalOpen(true);
