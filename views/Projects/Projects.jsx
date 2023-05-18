@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react';
+import { useState } from 'react';
 import Section from 'components/Section/Section';
 import ProjectCardOverlay from 'components/ProjectCardOverlay/ProjectCardOverlay';
 import Modal from 'components/Modal/Modal';
@@ -14,8 +14,6 @@ const Projects = ({ data }) => {
   const [isBtnShowMoreShown, setIsBtnShowMoreShown] = useState(false);
   const [filter, setFilter] = useState(null);
 
-  console.log(filter);
-
   const handleCheckQuantity = array => {
     if (array.length <= 6) {
       setFilteredProjects(array);
@@ -26,22 +24,19 @@ const Projects = ({ data }) => {
     }
   };
 
-  const handleFilter = useCallback(() => {
-    const projectsOfType = projects.filter(
-      ({ projectType }) => projectType === filter,
-    );
-
-    handleCheckQuantity(projectsOfType);
-  }, [filter, projects]);
-
   useEffect(() => {
     if (filter === null) {
-      // handleFilterAll();
       handleCheckQuantity(projects);
-    } else {
-      handleFilter();
     }
-  }, [filter, handleFilter, projects]);
+
+    if (filter !== null) {
+      const projectsOfType = projects.filter(
+        ({ projectType }) => projectType === filter,
+      );
+
+      handleCheckQuantity(projectsOfType);
+    }
+  }, [filter, projects]);
 
   const handleModalOpen = id => {
     setIsModalOpen(true);
@@ -68,6 +63,7 @@ const Projects = ({ data }) => {
           <button
             type="button"
             className="filterButton"
+            onTouchStart={() => setFilter(null)}
             onClick={() => setFilter(null)}
           >
             All
@@ -86,6 +82,7 @@ const Projects = ({ data }) => {
               <button
                 type="button"
                 className="filterButton"
+                onTouchStart={() => setFilter(type)}
                 onClick={() => setFilter(type)}
               >
                 {type}
@@ -95,53 +92,57 @@ const Projects = ({ data }) => {
         })}
       </ul>
 
-      <ul className="grid grid-cols-1 gap-y-10 md:grid-cols-2 md:gap-y-16 md:gap-x-[32px] xl:grid-cols-3 xl:gap-y-24 xl:gap-x-12">
-        {filteredProjects?.map(project => {
-          const { projectPreview, projectTitle, icon, tag, stack, id } =
-            project;
+      {filteredProjects && (
+        <ul className="grid grid-cols-1 gap-y-10 md:grid-cols-2 md:gap-y-16 md:gap-x-[32px] xl:grid-cols-3 xl:gap-y-24 xl:gap-x-12">
+          {filteredProjects?.map(project => {
+            const { projectPreview, projectTitle, icon, tag, stack, id } =
+              project;
 
-          return (
-            <li
-              key={id}
-              className="projectCard flex flex-col justify-start rounded"
-            >
-              <button
-                type="button"
-                onClick={() => handleModalOpen(id)}
-                className="cardButton inline-block text-left"
+            return (
+              <li
+                key={id}
+                className="projectCard flex flex-col justify-start rounded"
               >
-                <ProjectCardOverlay
-                  projectPreview={projectPreview}
-                  icon={icon}
-                  tag={tag}
-                  projectTitle={projectTitle}
-                />
+                <button
+                  type="button"
+                  onClick={() => handleModalOpen(id)}
+                  className="cardButton inline-block text-left"
+                >
+                  <ProjectCardOverlay
+                    projectPreview={projectPreview}
+                    icon={icon}
+                    tag={tag}
+                    projectTitle={projectTitle}
+                  />
 
-                <h3 className="cardTitle mb-3 font-playfair text-middle !font-semibold md:mb-4 xl:mb-6 xl:text-big">
-                  {projectTitle}
-                </h3>
+                  <h3 className="cardTitle mb-3 font-playfair text-middle !font-semibold md:mb-4 xl:mb-6 xl:text-big">
+                    {projectTitle}
+                  </h3>
 
-                <p className="text-small font-normal text-navyBlue">{stack}</p>
-              </button>
+                  <p className="text-small font-light text-navyBlue xl:font-normal">
+                    {stack}
+                  </p>
+                </button>
 
-              {isModalOpen && id === openedModalId && (
-                <Modal
-                  setIsModalOpen={setIsModalOpen}
-                  isModalOpen={isModalOpen}
-                  setOpenedModalId={setOpenedModalId}
-                  projectInfo={project}
-                />
-              )}
-            </li>
-          );
-        })}
-      </ul>
+                {isModalOpen && id === openedModalId && (
+                  <Modal
+                    setIsModalOpen={setIsModalOpen}
+                    isModalOpen={isModalOpen}
+                    setOpenedModalId={setOpenedModalId}
+                    projectInfo={project}
+                  />
+                )}
+              </li>
+            );
+          })}
+        </ul>
+      )}
 
       {isBtnShowMoreShown && (
         <button
           type="button"
           onClick={handleShowMore}
-          className="typicalBtn mx-auto mt-10 !h-[50px] !w-[120px] !rounded border border-navyBlue !text-small font-normal !text-navyBlue hover:!text-white focus:text-white md:mt-16 md:!h-[53px] md:!w-[200px] md:!text-middle xl:mt-20"
+          className="typicalBtn mx-auto mt-10 !h-[50px] !w-[120px] !rounded border border-transparentBlue !text-small font-light !text-navyBlue hover:!text-white focus:!text-white md:mt-16 md:!h-[53px] md:!w-[200px] md:!text-middle xl:mt-20 xl:font-normal"
         >
           Show More
         </button>

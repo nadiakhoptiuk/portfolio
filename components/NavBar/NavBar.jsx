@@ -25,7 +25,7 @@ const NavBar = ({ anchors, orientation, menu, handleClose }) => {
                 duration={500}
                 onClick={menu && handleClose}
                 className="cursor-pointer py-4 font-light text-white md:py-6 md:text-small xl:text-middle"
-                activeClass="relative after:bg-white after:content-[''] after:w-full after:h-[1px] after:absolute after:bottom-[18px] after:left-0 py-6 "
+                activeClass="relative after:bg-white after:content-[''] after:w-full after:h-[1px] after:absolute after:bottom-[20px] after:left-0 py-6 "
               >
                 {title}
               </Link>
@@ -40,7 +40,6 @@ const NavBar = ({ anchors, orientation, menu, handleClose }) => {
 export default NavBar;
 
 NavBar.propTypes = {
-  // anchors:,
   orientation: PropTypes.string.isRequired,
   handleClose: PropTypes.func,
 };
