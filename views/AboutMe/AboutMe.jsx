@@ -15,7 +15,7 @@ const AboutMe = ({ summaryData, contact }) => {
 
   return (
     <Section id={blockAnchorId} className="!pt-0">
-      <div className="md:flex md:flex-row-reverse">
+      <div className="md:flex md:flex-row-reverse xl:justify-end">
         <div className="pt-6 md:ml-8 xl:pt-[36px]">
           <h2 className="sectionTitle !xl:mb-9 !md:mb-6">{blockTitle}</h2>
 

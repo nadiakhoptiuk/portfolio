@@ -42,6 +42,5 @@ export default NavBar;
 NavBar.propTypes = {
   // anchors:,
   orientation: PropTypes.string.isRequired,
-  menu: PropTypes.bool.isRequired,
   handleClose: PropTypes.func,
 };

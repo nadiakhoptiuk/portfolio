@@ -3,7 +3,7 @@ import mainRequest from 'utils/request';
 import AboutMe from 'views/AboutMe/AboutMe';
 import Experience from 'views/Experience/Experience';
 import Hero from 'views/Hero/Hero';
-import Projects from 'views/Projects/Project';
+import Projects from 'views/Projects/Projects';
 import Reviews from 'views/Reviews/Reviews';
 
 const Home = props => {
