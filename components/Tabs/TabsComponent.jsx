@@ -88,7 +88,7 @@ const TabsComponent = ({ data }) => {
                 href={oneTabPanel.source}
                 rel="nofollow noreferrer noopener"
                 target="_blank"
-                className="absolute bottom-0 left-0 text-little underline md:text-small md:font-light"
+                className="absolute bottom-0 left-0 text-little font-light underline md:text-small"
               >
                 Source
               </a>

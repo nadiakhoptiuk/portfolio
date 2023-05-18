@@ -55,7 +55,7 @@ body {
 }
 
 .filterButtonItem {
-  @apply relative text-black transition-colors duration-300 after:absolute after:left-0 after:bottom-0 after:h-[1px] after:w-full after:bg-white after:content-[''] hover:text-navyBlue hover:after:bg-navyBlue focus:text-navyBlue;
+  @apply relative text-black transition-all duration-300 after:absolute after:left-[4px] after:bottom-0 after:h-[1px] after:w-[calc(100%-8px)] after:bg-white after:content-[''] hover:text-navyBlue hover:after:bg-navyBlue focus:text-navyBlue;
 }
 
 .filterButton {
@@ -63,7 +63,7 @@ body {
 }
 
 .filterButtonActiveItem {
-  @apply relative text-middle font-light text-navyBlue transition-colors duration-300 after:absolute after:left-0 after:bottom-0 after:h-[1px] after:w-full after:bg-navyBlue after:content-[''] xl:font-normal;
+  @apply relative text-middle font-light text-navyBlue transition-all duration-300 after:absolute after:left-[4px] after:bottom-0 after:h-[1px] after:w-[calc(100%-8px)] after:bg-navyBlue after:content-[''] hover:after:bg-navyBlue xl:font-normal;
 }
 
 .filterButtonActive {
