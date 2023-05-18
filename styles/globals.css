@@ -88,6 +88,7 @@ body {
 }
 
 /* MUI MODAL*/
+
 .MuiDialog-container {
   @apply mx-auto md:w-[704px] xl:w-[994px];
 }
@@ -104,11 +105,14 @@ body {
   @apply md:!py-2 xl:!py-4;
 }
 
+/* MUI MENU*/
+
 .menu .MuiPaper-root.MuiDialog-paper {
   @apply !max-h-full bg-black p-0;
 }
 
 /* Markdown */
+
 .markdown-wrapper p:last-child {
   margin-bottom: 0;
 }

@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const ProjectCardOverlay = ({ projectPreview, projectTitle, tag, icon }) => {
   return (
-    <div className="projectCardOverlay relative overflow-hidden rounded md:mb-6 md:h-[320px] xl:mb-9 xl:h-[320px]">
+    <div className="projectCardOverlay relative mb-5 h-[440px] overflow-hidden rounded md:mb-6 md:h-[320px] xl:mb-9">
       <Image
         src={projectPreview?.secure_url}
         alt={`preview of ${projectTitle}`}
@@ -14,7 +14,7 @@ const ProjectCardOverlay = ({ projectPreview, projectTitle, tag, icon }) => {
       <div className="overlay"></div>
 
       <div className="absolute top-0 left-0 flex h-full w-full items-center justify-center">
-        <p className="tag absolute font-light text-white md:left-[15px] md:top-[15px] md:text-small xl:top-[20px] xl:left-[20px] xl:text-middle">
+        <p className="tag absolute left-[15px] top-[15px] text-small font-light text-white xl:top-[20px] xl:left-[20px] xl:text-middle">
           {tag}
         </p>
 

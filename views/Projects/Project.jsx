@@ -20,7 +20,7 @@ const Projects = ({ data }) => {
       id={blockAnchorId}
       titleClassName="md:text-center md:after:left-1/2 md:after:translate-x-[-50%]"
     >
-      <ul className="grid md:grid-cols-2 md:gap-y-16 md:gap-x-[32px] xl:grid-cols-3 xl:gap-y-24 xl:gap-x-12">
+      <ul className="grid grid-cols-1 gap-y-10 md:grid-cols-2 md:gap-y-16 md:gap-x-[32px] xl:grid-cols-3 xl:gap-y-24 xl:gap-x-12">
         {projects?.map(project => {
           const { projectPreview, projectTitle, icon, tag, stack, id } =
             project;
@@ -42,7 +42,7 @@ const Projects = ({ data }) => {
                   projectTitle={projectTitle}
                 />
 
-                <h3 className="cardTitle font-playfair !font-semibold md:mb-4 md:text-middle xl:mb-6 xl:text-big">
+                <h3 className="cardTitle mb-3 font-playfair text-[20px] !font-semibold md:mb-4 md:text-middle xl:mb-6 xl:text-big">
                   {projectTitle}
                 </h3>
 
