@@ -27,7 +27,7 @@ const Hero = ({ heroData }) => {
           {fullName}
         </p>
 
-        <p className="font-sans text-middle font-light text-black xl:text-big">
+        <p className="font-sans text-middle font-light text-black xl:text-big xl:font-normal">
           {profession}
         </p>
       </div>

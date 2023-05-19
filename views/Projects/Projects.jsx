@@ -119,7 +119,7 @@ const Projects = ({ data }) => {
                     {projectTitle}
                   </h3>
 
-                  <p className="text-small font-light text-navyBlue xl:font-normal">
+                  <p className="text-small font-light text-navyBlue xl:text-middle xl:font-normal">
                     {stack}
                   </p>
                 </button>
@@ -142,7 +142,7 @@ const Projects = ({ data }) => {
         <button
           type="button"
           onClick={handleShowMore}
-          className="typicalBtn mx-auto mt-10 !h-[50px] !w-[120px] !rounded border border-transparentBlue !text-small font-light !text-navyBlue hover:!text-white focus:!text-white md:mt-16 md:!h-[53px] md:!w-[200px] md:!text-middle xl:mt-20 xl:font-normal"
+          className="typicalBtn mx-auto mt-10 !h-[50px] !w-[120px] !rounded border border-transparentBlue !text-small font-light !text-navyBlue hover:!text-white focus:!text-white md:mt-16 xl:mt-20 xl:!h-[53px] xl:!w-[200px] xl:!text-middle xl:font-normal"
         >
           Show More
         </button>
