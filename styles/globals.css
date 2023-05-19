@@ -47,7 +47,7 @@ body {
 }
 
 .typicalBtn {
-  @apply flex h-[100%] w-[100%] items-center justify-center rounded-[2px] bg-white transition-colors duration-300 hover:bg-navyBlue hover:text-white focus:bg-navyBlue focus:text-white;
+  @apply flex h-[100%] w-[100%] items-center justify-center rounded-[3px] bg-white transition-colors duration-300 hover:bg-navyBlue hover:text-white focus:bg-navyBlue focus:text-white;
 }
 
 .typicalBtn > svg {
