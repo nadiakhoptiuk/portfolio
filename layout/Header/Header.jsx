@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import dynamic from 'next/dynamic.js';
 import Link from 'next/link';
 import { useMediaQuery } from 'react-responsive';
@@ -10,8 +9,8 @@ const MobileMenu = dynamic(() =>
 );
 
 export const Header = ({ data }) => {
-  const [isBurgerShown, setIsBurgerShown] = useState(false);
   const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
+  const isTabAndMore = useMediaQuery({ query: '(min-width: 768px)' });
   const keys = Object.values(data);
 
   const anchors = keys
@@ -21,11 +20,6 @@ export const Header = ({ data }) => {
     });
 
   const sortedAnchors = [...anchors].sort((a, b) => a.order - b.order);
-
-  useEffect(() => {
-    isMobile && setIsBurgerShown(true);
-    !isMobile && setIsBurgerShown(false);
-  }, [isMobile]);
 
   return (
     <header className="fixed top-0 left-0 z-20 h-[70px] w-[100%] bg-black">
@@ -37,7 +31,7 @@ export const Header = ({ data }) => {
           N. Khoptiuk
         </Link>
 
-        {!isBurgerShown && (
+        {isTabAndMore && (
           <NavBar
             anchors={sortedAnchors}
             orientation="horizontal"
@@ -45,7 +39,7 @@ export const Header = ({ data }) => {
           />
         )}
 
-        {isBurgerShown && <MobileMenu anchors={sortedAnchors} />}
+        {isMobile && <MobileMenu anchors={sortedAnchors} />}
       </Container>
     </header>
   );
