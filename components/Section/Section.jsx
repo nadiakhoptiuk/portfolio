@@ -4,7 +4,6 @@ import Container from 'components/Container/Container';
 
 const Section = ({
   children,
-  h1,
   h2,
   titleClassName,
   className,
@@ -19,17 +18,6 @@ const Section = ({
           `${containerClassName ? containerClassName : ''}`,
         )}
       >
-        {h1 && (
-          <h1
-            className={classNames(
-              'sectionTitle',
-              `${titleClassName ? titleClassName : ''}`,
-            )}
-          >
-            {h1}
-          </h1>
-        )}
-
         {h2 && (
           <h2
             className={classNames(
@@ -51,7 +39,6 @@ export default Section;
 
 Section.propTypes = {
   children: PropTypes.node.isRequired,
-  h1: PropTypes.string,
   h2: PropTypes.string,
   titleClassName: PropTypes.string,
   className: PropTypes.string,

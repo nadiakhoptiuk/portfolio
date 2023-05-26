@@ -23,7 +23,7 @@
 body {
   @apply pt-[70px] font-sans text-middle;
 }
-
+/* 
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -36,7 +36,7 @@ body {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
+} */
 
 .section {
   @apply pt-[24px] pb-[54px] md:pb-[64px] xl:pt-[36px] xl:pb-[100px];
