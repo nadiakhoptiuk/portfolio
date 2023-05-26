@@ -13,9 +13,7 @@ const Home = props => {
     <>
       <Head>
         <title>N.KHOPTIUK - PORTFOLIO</title>
-        {/* <meta name="description" content="Next app template" />
-         <link rel="icon" href="/favicon.ico" />
-         */}
+
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 

@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import dynamic from 'next/dynamic.js';
 import Link from 'next/link';
 import { useMediaQuery } from 'react-responsive';
