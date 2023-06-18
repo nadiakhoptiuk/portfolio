@@ -32,6 +32,7 @@ const AboutMe = ({ summaryData, contact }) => {
             src={secure_url}
             width={479}
             height={538}
+            quality={100}
             priority
             className="h-full w-full object-cover object-left-bottom"
           />

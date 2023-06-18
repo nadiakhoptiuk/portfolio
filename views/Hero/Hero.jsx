@@ -16,6 +16,7 @@ const Hero = ({ heroData }) => {
           src={heroImage.secure_url}
           width={1440}
           height={547}
+          quality={100}
           priority
           className="h-full w-full object-cover object-right"
         />
