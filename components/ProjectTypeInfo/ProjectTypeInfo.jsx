@@ -9,7 +9,7 @@ const ProjectTypeInfo = ({ role = '', isCommand }) => {
 
         {isCommand === true ? <CommandIcon /> : <OwnIcon />}
 
-        <span className="ml-[14px] text-little">command</span>
+        <span className="ml-[14px] text-little">team</span>
       </div>
 
       {role && <p className="text-little">Role: {role}</p>}
