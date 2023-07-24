@@ -54,7 +54,7 @@ const Projects = ({ data }) => {
       id={blockAnchorId}
       titleClassName="md:text-center md:after:left-1/2 md:after:translate-x-[-50%]"
     >
-      <ul className="mb-6 flex justify-end md:mb-6 xl:mb-10">
+      <ul className="mb-6 ml-auto flex flex-wrap justify-end max-md:max-w-[320px] md:mb-6 md:max-w-max xl:mb-10">
         <li
           className={
             filter === null ? 'filterButtonActiveItem' : 'filterButtonItem'
