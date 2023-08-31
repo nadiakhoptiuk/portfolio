@@ -59,7 +59,7 @@ export default function Document() {
           name="twitter:title"
           content="Full Stack Developer Nadiia Khoptiuk's portfolio"
         />
-        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:card" content="summary_large_image"> />
 
         <meta property="og:image" content={'/preview.jpg'} />
         <meta property="og:image:width" content="903" />
