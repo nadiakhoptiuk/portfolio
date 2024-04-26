@@ -22,7 +22,7 @@ export const Header = ({ data }) => {
   const sortedAnchors = [...anchors].sort((a, b) => a.order - b.order);
 
   return (
-    <header className="fixed top-0 left-0 z-20 h-[70px] w-[100%] bg-black">
+    <header className="fixed left-0 top-0 z-20 h-[70px] w-[100%] bg-black">
       <Container className="container flex h-full items-center justify-between">
         <Link
           href="/"
