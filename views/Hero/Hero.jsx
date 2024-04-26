@@ -22,7 +22,7 @@ const Hero = ({ heroData }) => {
         />
       </div>
 
-      <div className="absolute top-0 left-5 z-10 pt-[62px] md:pt-[100px] xl:pt-[185px]">
+      <div className="absolute left-5 top-0 z-10 pt-[62px] md:pt-[100px] xl:pt-[185px]">
         <h1 className="mb-3 flex w-max items-center font-playfair text-[22px] font-semibold leading-[24px] md:mb-4 md:text-[38px] md:leading-[64px] xl:mb-10 xl:text-[68px] xl:leading-[85px]">
           {fullName}
         </h1>
