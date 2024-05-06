@@ -30,8 +30,6 @@ const Hero = ({ heroData }) => {
         <p className="font-sans text-middle font-light text-black xl:text-big xl:font-normal">
           {profession}
         </p>
-
-        <p>Test block</p>
       </div>
     </Section>
   );
