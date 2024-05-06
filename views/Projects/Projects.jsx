@@ -54,7 +54,7 @@ const Projects = ({ data }) => {
       id={blockAnchorId}
       titleClassName="md:text-center md:after:left-1/2 md:after:translate-x-[-50%]"
     >
-      <ul className="mb-6 ml-auto flex flex-wrap justify-end max-md:max-w-[320px] md:mb-6 md:max-w-max xl:mb-10">
+      <ul className="mb-6 ml-auto flex flex-wrap justify-end max-md:max-w-[320px] md:mb-10 md:max-w-max xl:mb-12">
         <li
           className={
             filter === null ? 'filterButtonActiveItem' : 'filterButtonItem'
@@ -93,7 +93,7 @@ const Projects = ({ data }) => {
       </ul>
 
       {filteredProjects && (
-        <ul className="grid grid-cols-1 gap-y-10 md:grid-cols-2 md:gap-y-16 md:gap-x-[32px] xl:grid-cols-3 xl:gap-y-24 xl:gap-x-12">
+        <ul className="grid grid-cols-1 gap-y-10 md:grid-cols-2 md:gap-x-[32px] md:gap-y-12 xl:grid-cols-3">
           {filteredProjects?.map(project => {
             const { projectPreview, projectTitle, icon, tag, stack, id } =
               project;
@@ -115,7 +115,7 @@ const Projects = ({ data }) => {
                     projectTitle={projectTitle}
                   />
 
-                  <h3 className="cardTitle mb-3 font-playfair text-middle !font-semibold md:mb-4 xl:mb-6 xl:text-big">
+                  <h3 className="cardTitle mb-3 font-playfair text-middle !font-semibold md:mb-4 xl:text-big">
                     {projectTitle}
                   </h3>
 

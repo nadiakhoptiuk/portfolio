@@ -65,9 +65,9 @@ const Modal = ({
               className="h-full w-full object-cover object-center"
             />
 
-            <div className="absolute top-0 left-0 flex h-full w-full items-center justify-center bg-black opacity-50 "></div>
+            <div className="absolute left-0 top-0 flex h-full w-full items-center justify-center bg-black opacity-50 "></div>
 
-            <div className="absolute top-0 left-0 flex h-full w-full items-center justify-center">
+            <div className="absolute left-0 top-0 flex h-full w-full items-center justify-center">
               <Image
                 src={icon?.secure_url}
                 alt={`preview of ${projectTitle} Logo`}
