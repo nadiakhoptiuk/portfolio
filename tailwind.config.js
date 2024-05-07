@@ -29,6 +29,7 @@ module.exports = {
         black: '#1A1A1A',
         navyBlue: '#33639F',
         transparentBlue: 'rgba(51, 99, 159, 0.5)',
+        beige: '#B9A38E',
       },
 
       fontFamily: {
