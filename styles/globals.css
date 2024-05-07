@@ -92,7 +92,7 @@ body {
 }
 
 .MuiBox-root {
-  @apply md:!h-[358px] xl:!h-[375px];
+  @apply md:!h-[375px];
 }
 
 .MuiButtonBase-root.MuiTab-root {
