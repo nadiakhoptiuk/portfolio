@@ -10,22 +10,24 @@ const Projects = ({ data }) => {
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [openedModalId, setOpenedModalId] = useState(null);
+  const [shownProjects, setShownProjects] = useState(null);
   const [filteredProjects, setFilteredProjects] = useState(null);
   const [isBtnShowMoreShown, setIsBtnShowMoreShown] = useState(false);
   const [filter, setFilter] = useState(null);
 
   const handleCheckQuantity = array => {
     if (array.length <= 6) {
-      setFilteredProjects(array);
+      setShownProjects(array);
       setIsBtnShowMoreShown(false);
     } else {
-      setFilteredProjects(array.slice(0, 6));
+      setShownProjects(array.slice(0, 6));
       setIsBtnShowMoreShown(true);
     }
   };
 
   useEffect(() => {
     if (filter === null) {
+      setFilteredProjects(projects);
       handleCheckQuantity(projects);
     }
 
@@ -33,7 +35,7 @@ const Projects = ({ data }) => {
       const projectsOfType = projects.filter(
         ({ projectType }) => projectType === filter,
       );
-
+      setFilteredProjects(projectsOfType);
       handleCheckQuantity(projectsOfType);
     }
   }, [filter, projects]);
@@ -44,7 +46,7 @@ const Projects = ({ data }) => {
   };
 
   const handleShowMore = () => {
-    setFilteredProjects(projects);
+    setShownProjects(filteredProjects);
     setIsBtnShowMoreShown(false);
   };
 
@@ -69,6 +71,7 @@ const Projects = ({ data }) => {
             All
           </button>
         </li>
+
         {types.map(type => {
           return (
             <li
@@ -92,9 +95,9 @@ const Projects = ({ data }) => {
         })}
       </ul>
 
-      {filteredProjects && (
+      {shownProjects && (
         <ul className="grid grid-cols-1 gap-y-10 md:grid-cols-2 md:gap-x-[32px] md:gap-y-12 xl:grid-cols-3">
-          {filteredProjects?.map(project => {
+          {shownProjects?.map(project => {
             const { projectPreview, projectTitle, icon, tag, stack, id } =
               project;
 

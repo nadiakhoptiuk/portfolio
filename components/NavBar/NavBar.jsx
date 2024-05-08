@@ -24,8 +24,8 @@ const NavBar = ({ anchors, orientation, menu, handleClose }) => {
                 hashSpy={true}
                 duration={500}
                 onClick={menu && handleClose}
-                className="relative cursor-pointer py-4 font-light text-white transition-colors duration-500 after:absolute after:bottom-[20px] after:left-0 after:h-[1px] after:w-full after:origin-right after:scale-x-0 after:bg-white after:transition-transform after:content-[''] hover:after:origin-left hover:after:scale-x-100 focus:after:origin-left focus:after:scale-x-100 md:py-6 md:text-small xl:text-middle"
-                activeClass="relative after:bg-beige text-beige after:content-[''] after:w-full after:h-[1px] after:absolute after:bottom-[20px] after:left-0 py-6"
+                className="relative cursor-pointer py-4 font-light text-white transition-colors duration-300 after:absolute after:bottom-[20px] after:left-0 after:h-[1px] after:w-full after:origin-right after:scale-x-0 after:bg-white after:transition-transform after:duration-500 after:content-[''] hover:after:origin-left hover:after:scale-x-100 focus:after:origin-left focus:after:scale-x-100 md:py-6 md:text-small xl:text-middle"
+                activeClass="relative !after:bg-beige !text-beige after:content-[''] after:w-full after:h-[1px] after:hidden after:bottom-[20px] after:left-0 py-6"
               >
                 {title}
               </Link>
