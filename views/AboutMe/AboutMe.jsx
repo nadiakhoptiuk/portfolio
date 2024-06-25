@@ -26,7 +26,7 @@ const AboutMe = ({ summaryData, contact }) => {
           {!isMobile && <ContactBtnList data={contact} />}
         </div>
 
-        <div className="flex-shrink-0 overflow-hidden rounded max-md:mb-10 md:h-[420px] md:w-[336px] xl:h-[538px] xl:w-[479px]">
+        <div className="flex-shrink-0 overflow-hidden rounded md:h-[420px] md:w-[336px] xl:h-[538px] xl:w-[479px] smOnly:mb-10">
           <Image
             alt="Nadiia Khoptiuk photo"
             src={secure_url}

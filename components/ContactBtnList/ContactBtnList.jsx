@@ -4,7 +4,7 @@ const ContactBtnList = ({ data }) => {
   const { contactLink } = data;
 
   return (
-    <ul className="grid w-max grid-cols-3 gap-[10px] max-md:mx-auto xl:gap-[12px]">
+    <ul className="grid w-max grid-cols-3 gap-[10px] xl:gap-[12px] smOnly:mx-auto">
       {contactLink?.map(({ id, link, title, isemail }) => {
         return (
           <li

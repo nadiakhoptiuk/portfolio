@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { Scrollbars } from 'react-custom-scrollbars-2';
 import Markdown from 'markdown-to-jsx';
+
 import Tabs, { tabsClasses } from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
@@ -67,8 +68,8 @@ const TabsComponent = ({ data }) => {
               {oneTabPanel.blueText}
             </p>
 
-            <Scrollbars style={{ width: '100%', height: '224px' }} universal>
-              <div className="prose pr-[10px] prose-p:mt-0 prose-p:not-italic prose-blockquote:text-small prose-blockquote:font-light prose-blockquote:leading-[28px] prose-li:mt-0 prose-li:text-small prose-li:font-light prose-li:text-black prose-li:marker:text-black md:w-[408px] md:prose-li:mb-2 xl:!w-[560px] xl:prose-blockquote:text-middle xl:prose-blockquote:font-normal xl:prose-blockquote:leading-[28px]  xl:prose-li:mb-3 xl:prose-li:text-middle xl:prose-li:font-normal xl:prose-li:leading-[28px]">
+            <Scrollbars style={{ width: '100%', height: '270px' }} universal>
+              <div className="prose pr-[10px] prose-p:mt-0 prose-p:text-small prose-p:font-light prose-p:not-italic prose-blockquote:text-small prose-blockquote:font-light prose-blockquote:leading-[28px] prose-li:mt-0 prose-li:text-small prose-li:font-light prose-li:text-black prose-li:marker:text-black md:w-[408px] md:prose-li:mb-2 xl:!w-[560px] xl:prose-p:text-middle xl:prose-p:font-normal xl:prose-p:leading-[28px] xl:prose-blockquote:text-middle xl:prose-blockquote:font-normal xl:prose-blockquote:leading-[28px] xl:prose-li:mb-3 xl:prose-li:text-middle xl:prose-li:font-normal xl:prose-li:leading-[28px]">
                 <Markdown>{oneTabPanel.description}</Markdown>
               </div>
             </Scrollbars>

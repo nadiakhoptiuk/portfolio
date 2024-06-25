@@ -76,7 +76,7 @@ body {
 }
 
 .mainTabsRoot {
-  @apply !shrink-0 max-md:mb-8 md:mr-8 xl:mr-[139px];
+  @apply !shrink-0 md:mr-8 xl:mr-[139px] smOnly:mb-8;
 }
 
 .MuiTabs-indicator {
@@ -84,7 +84,7 @@ body {
 }
 
 .MuiTabs-root .MuiTabs-scrollButtons {
-  @apply max-md:!flex md:!hidden;
+  @apply md:!hidden smOnly:!flex;
 }
 
 .Mui-focusVisible .MuiTouchRipple-root {
@@ -92,11 +92,11 @@ body {
 }
 
 .MuiBox-root {
-  @apply md:!h-[358px] xl:!h-[375px];
+  @apply md:!h-[405px] xl:!h-[405px];
 }
 
 .MuiButtonBase-root.MuiTab-root {
-  @apply h-[56px] min-w-[125px] max-w-[376px] items-start !rounded bg-transparent px-[16px] py-[18px] !font-sans text-small font-light capitalize !text-navyBlue transition duration-300 last:mb-0 last:mr-0 max-md:mr-[8px] max-md:flex max-md:items-center md:mb-1 md:w-[244px] md:font-normal xl:w-[376px] xl:text-middle;
+  @apply h-[56px] min-w-[125px] max-w-[376px] items-start !rounded bg-transparent px-[16px] py-[18px] !font-sans text-small font-light capitalize !text-navyBlue transition duration-300 last:mb-0 last:mr-0 md:mb-1 md:w-[244px] md:font-normal xl:w-[376px] xl:text-middle smOnly:mr-[8px] smOnly:flex smOnly:items-center;
   border: 1px solid rgba(51, 99, 159, 0.5) !important;
 }
 
@@ -122,7 +122,7 @@ body {
 }
 
 .MuiPaper-root.MuiDialog-paper {
-  @apply h-[100%] max-h-[600px] w-[100%] max-w-[100%] px-4 pb-6 pt-4;
+  @apply h-[100%] max-h-[650px] w-[100%] max-w-[100%] px-4 pb-6 pt-4 md:m-0;
 }
 
 .MuiDialogContent-root {
@@ -147,11 +147,11 @@ body {
 
 /* Projects */
 .livePageItem {
-  @apply flex h-[54px] w-[145px] items-center justify-center rounded border-[1px] border-transparentBlue bg-white transition-colors duration-300 hover:border-navyBlue;
+  @apply flex h-[54px] w-[145px] shrink-0 items-center justify-center rounded border-[1px] border-transparentBlue bg-white transition-colors duration-300 hover:border-navyBlue;
 }
 
 .gitAndYouTubeItem {
-  @apply ml-[30px] flex h-[39px] w-[39px] items-center justify-center rounded;
+  @apply flex h-[39px] w-[39px] items-center justify-center rounded;
 }
 
 .livePageLink {

@@ -15,7 +15,7 @@ const Button = ({ className, title, link, isemail, isTitle = 'true' }) => {
           rel="nofollow noreferrer noopener"
         >
           <Email />
-          <span className="ml-[10px] max-xl:hidden xl:text-middle">
+          <span className="max-xl:hidden ml-[10px] xl:text-middle">
             {title}
           </span>
         </a>
