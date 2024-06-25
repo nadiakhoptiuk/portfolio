@@ -1,10 +1,16 @@
+import classNames from 'classnames';
 import Button from 'components/Button/Button';
 
-const ContactBtnList = ({ data }) => {
+const ContactBtnList = ({ data, className = '' }) => {
   const { contactLink } = data;
 
   return (
-    <ul className="grid w-max grid-cols-3 gap-[10px] xl:gap-[12px] smOnly:mx-auto">
+    <ul
+      className={classNames(
+        'grid w-max grid-cols-3 gap-[10px] xl:gap-[12px] smOnly:mx-auto',
+        className,
+      )}
+    >
       {contactLink?.map(({ id, link, title, isemail }) => {
         return (
           <li

@@ -54,12 +54,8 @@ body {
   fill: currentColor;
 }
 
-.filterButtonItem {
-  @apply relative text-black transition-all duration-300 after:absolute after:bottom-0 after:left-[4px] after:h-[1px] after:w-[calc(100%-8px)] after:bg-white after:content-[''] hover:text-navyBlue hover:after:bg-navyBlue focus:text-navyBlue;
-}
-
 .filterButton {
-  @apply cursor-pointer !p-[4px] text-middle font-light xl:font-normal;
+  @apply relative cursor-pointer !p-[4px] text-middle font-light text-black transition-all duration-300 after:absolute after:bottom-0 after:left-[4px] after:h-[1px] after:w-[calc(100%-8px)] after:origin-right after:scale-x-0 after:bg-navyBlue after:transition-transform after:duration-500 after:content-[''] hover:text-navyBlue hover:after:origin-left hover:after:scale-x-100 focus:text-navyBlue focus:after:origin-left focus:after:scale-x-100 xl:font-normal;
 }
 
 .filterButtonActiveItem {
@@ -92,7 +88,7 @@ body {
 }
 
 .MuiBox-root {
-  @apply md:!h-[405px] xl:!h-[405px];
+  @apply md:!h-[525px];
 }
 
 .MuiButtonBase-root.MuiTab-root {
@@ -142,6 +138,13 @@ body {
 /* Markdown */
 
 .markdown-wrapper p:last-child {
+  margin-bottom: 0;
+}
+
+.prose p:last-child {
+  margin-bottom: 0;
+}
+.prose li:last-child {
   margin-bottom: 0;
 }
 
