@@ -15,9 +15,7 @@ const Button = ({ className, title, link, isemail, isTitle = 'true' }) => {
           rel="nofollow noreferrer noopener"
         >
           <Email />
-          <span className="ml-[10px] max-xl:hidden xl:text-middle">
-            {title}
-          </span>
+          <span className="ml-[10px] xl:text-middle notXl:hidden">{title}</span>
         </a>
       )}
 
@@ -41,7 +39,7 @@ const Button = ({ className, title, link, isemail, isTitle = 'true' }) => {
           {isTitle && (
             <span
               className={`ml-[10px]  xl:text-middle ${
-                title === 'Live page' ? '' : 'max-xl:hidden'
+                title === 'Live page' ? '' : 'notXl:hidden'
               }`}
             >
               {title}

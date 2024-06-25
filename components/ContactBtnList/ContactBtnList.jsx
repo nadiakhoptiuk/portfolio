@@ -7,7 +7,7 @@ const ContactBtnList = ({ data, className = '' }) => {
   return (
     <ul
       className={classNames(
-        'grid w-max grid-cols-3 gap-[10px] max-md:mx-auto xl:gap-[12px]',
+        'grid w-max grid-cols-3 gap-[10px] xl:gap-[12px] smOnly:mx-auto',
         className,
       )}
     >

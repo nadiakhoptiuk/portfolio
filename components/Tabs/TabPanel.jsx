@@ -9,7 +9,7 @@ const TabPanel = props => {
       hidden={value !== index}
       id={`vertical-tabpanel-${index}`}
       aria-labelledby={`vertical-tab-${index}`}
-      className="relative max-md:pb-8"
+      className="relative smOnly:pb-8"
     >
       {value === index && (
         <Box className="!h-[100%] md:w-[428px] xl:w-[582px]">{children}</Box>

@@ -1,13 +1,14 @@
 // import PropTypes from 'prop-types';
+import Image from 'next/image';
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import DialogTitle from '@mui/material/DialogTitle';
 import DialogContent from '@mui/material/DialogContent';
 import DialogActions from '@mui/material/DialogActions';
 import CloseIcon from '@mui/icons-material/Close';
+
 import ProjectTypeInfo from 'components/ProjectTypeInfo/ProjectTypeInfo';
 import ProjectBtnList from 'components/ProjectBtnList/ProjectBtnList';
-import Image from 'next/image';
 
 const Modal = ({
   setIsModalOpen,
@@ -54,8 +55,11 @@ const Modal = ({
           {projectTitle}
         </DialogTitle>
 
-        <DialogContent dividers className="md:flex">
-          <div className="relative shrink-0 overflow-hidden rounded max-md:mb-5 md:mr-[32px] md:h-[360px] md:w-[260px] xl:mr-9 xl:h-[420px] xl:w-[376px]">
+        <DialogContent
+          dividers
+          className="md:grid md:auto-rows-max md:grid-cols-[280px_304px] md:gap-10 xl:grid-cols-[326px_auto]"
+        >
+          <div className="relative overflow-hidden rounded md:h-[380px] md:w-[280px] xl:h-[450px] xl:w-[326px] smOnly:mb-5">
             <Image
               src={projectPreview?.secure_url}
               alt={`preview of ${projectTitle}`}
@@ -78,15 +82,20 @@ const Modal = ({
             </div>
           </div>
 
-          <div className="flex flex-col">
+          <div className="flex flex-col smOnly:mb-6">
             <p className="mb-4 text-small md:mb-6">{description}</p>
-
             <p className="mb-5 text-small text-navyBlue md:mb-9">{stack}</p>
-
             <ProjectTypeInfo role={role} isCommand={isCommand} />
-
-            <ProjectBtnList buttonData={button} />
+            <ProjectBtnList
+              buttonData={button}
+              className="mt-10 notXl:hidden"
+            />
           </div>
+
+          <ProjectBtnList
+            buttonData={button}
+            className="mt-8 md:col-span-2 md:col-start-1 md:mt-4 md:w-full xl:!hidden"
+          />
         </DialogContent>
       </Dialog>
     </div>
