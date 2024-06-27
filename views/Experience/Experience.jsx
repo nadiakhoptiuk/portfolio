@@ -32,7 +32,11 @@ const Experience = ({ data }) => {
   );
 
   return (
-    <Section h2={blockTitle} id={blockAnchorId}>
+    <Section
+      h2={blockTitle}
+      id={blockAnchorId}
+      className="md:!pt-[64px] xl:!pt-[100px] smOnly:!pt-[54px]"
+    >
       <TabsComponent data={expData} />
     </Section>
   );

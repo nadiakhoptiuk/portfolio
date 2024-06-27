@@ -175,6 +175,22 @@ body {
   fill: currentColor;
 }
 
+/* Projects Block */
+
+.paralaxBox {
+  height: auto;
+  width: 100%;
+  overflow-x: hidden;
+  background-attachment: fixed;
+}
+
+.background {
+  @apply mx-auto h-[600px] w-[1700px] bg-[length:1700px_600px] bg-center xl:h-screen xl:w-[2902px] xl:bg-[length:2902px_1024px];
+  background-image: url('/bg_projects_beige_perspective.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 /* Project Card */
 
 .projectCardOverlay {
