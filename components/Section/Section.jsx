@@ -8,10 +8,10 @@ const Section = ({
   titleClassName,
   className,
   containerClassName,
-  id,
+  id = '',
 }) => {
   return (
-    <section className={classNames('section', className)} id={id || ''}>
+    <section className={classNames('section', className)} id={id}>
       <Container
         className={classNames(
           'container',
