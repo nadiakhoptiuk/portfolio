@@ -1,8 +1,8 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+
 import Section from 'components/Section/Section';
 import ProjectCardOverlay from 'components/ProjectCardOverlay/ProjectCardOverlay';
 import Modal from 'components/Modal/Modal';
-import { useEffect } from 'react';
 
 const Projects = ({ data }) => {
   const { blockTitle, blockAnchorId, project: projects } = data;

@@ -26,6 +26,8 @@ const Home = props => {
 
   useGSAP(
     () => {
+      if (!isDesktop) return;
+
       gsap.to('.background', {
         x: isDesktop ? -1000 : isSmallDesktop ? -425 : isTablet ? -680 : -800,
         duration: 20000,
@@ -44,13 +46,52 @@ const Home = props => {
 
   useGSAP(
     () => {
+      if (!isDesktop) return;
+
       gsap.to(main, {
         scrollTrigger: {
           trigger: '.paralaxBox',
           start: 'top 70px',
           end: '+=300',
           pin: true,
+          pinSpacing: true,
         },
+      });
+    },
+    { scope: document.body },
+  );
+
+  useGSAP(
+    () => {
+      let coloredSections = gsap.utils.toArray('[data-color]');
+
+      coloredSections.forEach((section, i) => {
+        let [bgColor, color] = section.getAttribute('data-color').split(' ');
+
+        ScrollTrigger.create({
+          trigger: section,
+          start: '-200 top',
+          end: 'bottom 200',
+          // markers: true,
+          onToggle: self => {
+            if (self.isActive) {
+              gsap.to(document.body, {
+                backgroundColor: bgColor,
+                color: color,
+                overwrite: 'auto',
+              });
+            } else if (
+              (i === 0 && self.direction < 0) ||
+              (i === coloredSections.length - 1 && self.direction > 0)
+            ) {
+              gsap.to(document.body, {
+                backgroundColor: '#fff',
+                color: '#1A1A1A',
+                overwrite: 'auto',
+              });
+            }
+          },
+        });
       });
     },
     { scope: document.body },

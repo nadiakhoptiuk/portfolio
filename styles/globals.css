@@ -47,7 +47,7 @@ body {
 }
 
 .typicalBtn {
-  @apply flex h-[100%] w-[100%] items-center justify-center rounded-[3px] bg-white transition-colors duration-300 hover:bg-navyBlue hover:text-white focus:bg-navyBlue focus:text-white;
+  @apply flex h-[100%] w-[100%] items-center justify-center rounded-[3px] bg-inherit transition-colors duration-300 hover:bg-navyBlue hover:text-white focus:bg-navyBlue focus:text-white;
 }
 
 .typicalBtn > svg {
@@ -181,14 +181,14 @@ body {
   height: auto;
   width: 100%;
   overflow-x: hidden;
-  background-attachment: fixed;
 }
 
 .background {
-  @apply mx-auto h-[600px] w-[1700px] bg-[length:1700px_600px] bg-center xl:h-screen xl:w-[2902px] xl:bg-[length:2902px_1024px];
+  @apply mx-auto h-[1000px] w-[2268px] bg-center md:bg-[length:2902px_1024px] xl:h-screen xl:w-[2902px];
   background-image: url('/bg_projects_beige_perspective.png');
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-position: 20%;
 }
 
 /* Project Card */

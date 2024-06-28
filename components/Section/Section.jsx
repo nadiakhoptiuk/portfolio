@@ -9,9 +9,14 @@ const Section = ({
   className,
   containerClassName,
   id = '',
+  dataColor = null,
 }) => {
   return (
-    <section className={classNames('section', className)} id={id}>
+    <section
+      className={classNames('section', className)}
+      id={id}
+      data-color={dataColor}
+    >
       <Container
         className={classNames(
           'container',

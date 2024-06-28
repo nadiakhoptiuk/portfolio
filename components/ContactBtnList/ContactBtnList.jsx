@@ -7,15 +7,16 @@ const ContactBtnList = ({ data, className = '' }) => {
   return (
     <ul
       className={classNames(
-        'grid w-max grid-cols-3 gap-[10px] xl:gap-[12px] smOnly:mx-auto',
+        'grid w-max -translate-x-[1000px] grid-cols-3 gap-[10px] xl:gap-[12px] smOnly:mx-auto',
         className,
       )}
     >
-      {contactLink?.map(({ id, link, title, isemail }) => {
+      {contactLink?.map(({ id, link, title, isemail }, index) => {
         return (
           <li
             key={id}
-            className="transitions-colors flex h-[50px] w-[50px] items-center justify-center rounded border border-transparentBlue duration-300 hover:border-navyBlue xl:h-[55px] xl:w-[200px]"
+            className="contactBtnItem transitions-colors flex h-[50px] w-[50px] items-center justify-center rounded border border-transparentBlue duration-300 hover:border-navyBlue xl:h-[55px] xl:w-[200px] "
+            data-speed={0.5 * (index + 1)}
           >
             <Button
               className="typicalBtn"
