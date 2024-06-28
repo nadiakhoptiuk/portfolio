@@ -13,7 +13,11 @@ const AboutMe = ({ summaryData, contact }) => {
   } = summaryData;
 
   return (
-    <Section id={blockAnchorId} className="pt-6 md:pt-0">
+    <Section
+      id={blockAnchorId}
+      className="pt-6 md:pt-0"
+      dataColor="#ffffff #1A1A1A"
+    >
       <div className="md:grid md:grid-cols-2 md:grid-rows-[56px_324px_80px] md:gap-x-8 md:gap-y-10 xl:grid-cols-[198px_248px_346px_198px] xl:grid-rows-[79px_408px_55px] xl:gap-y-[64px]">
         <h2 className="sectionTitle md:col-start-2 md:pt-6 md:after:top-0 xl:col-span-2 xl:col-start-3 xl:pt-[36px]">
           {blockTitle}

@@ -1,14 +1,72 @@
-import Section from 'components/Section/Section';
 import Image from 'next/image';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import { useGSAP } from '@gsap/react';
+
+import Section from 'components/Section/Section';
+
+if (typeof window !== 'undefined') {
+  gsap.registerPlugin(ScrollTrigger, useGSAP);
+}
 
 const Hero = ({ heroData }) => {
   const { heroImage, profession, fullName } = heroData;
+
+  useGSAP(
+    () => {
+      const floatBtns = gsap.utils.toArray('[data-speed]');
+      gsap.set(floatBtns, { scale: 0.7, translateX: 0, opacity: 0.4 });
+
+      floatBtns.forEach(floatBtn => {
+        let tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: floatBtns,
+            start: 'top bottom',
+            end: 'top 5%',
+            // markers: true,
+            scrub: 0,
+          },
+        });
+
+        tl.to(floatBtn, {
+          x: 1000,
+          ease: 'none',
+          scale: 1,
+          duration: 1,
+          opacity: 1,
+        })
+          .to(floatBtn, { opacity: 1 })
+          .to(floatBtn, { opacity: 0 }, '+=1');
+      });
+    },
+
+    //   gsap.to('[data-speed]', {
+    //     // y: (i, el) =>
+    //     //   (1 - parseFloat(el.getAttribute('data-speed'))) *
+    //     //   ScrollTrigger.maxScroll(window),
+    //     x: 1000,
+    //     ease: 'none',
+    //     rotate: 360,
+    //     duration: 1,
+    //     scrollTrigger: {
+    //       trigger: floatBtns,
+    //       start: 'top bottom',
+    //       end: 'top 80%',
+    //       invalidateOnRefresh: true,
+    //       scrub: 0,
+    //       markers: true,
+    //     },
+    //   });
+    // },
+    { scope: document.body },
+  );
 
   return (
     <Section
       titleClassName="visually-hidden !m-0 !-mt-1"
       className="mx-auto h-[274px] w-full overflow-hidden !pt-0 md:h-[414px] xl:h-[647px] xl:max-w-[1440px]"
       containerClassName="relative xl:h-[547px] md:h-[350px] top-0 h-[220px]"
+      dataColor="#B9A38E #1A1A1A"
     >
       <div className="absolute left-1/2 h-[220px] w-[480px] !-translate-x-1/2 md:h-[350px] md:w-[768px] xl:h-[547px] xl:w-[1440px]">
         <Image
