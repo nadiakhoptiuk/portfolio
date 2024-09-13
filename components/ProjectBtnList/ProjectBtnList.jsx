@@ -1,8 +1,6 @@
 import Button from 'components/Button/Button';
 
 const ProjectBtnList = ({ buttonData, className = '' }) => {
-  console.log(buttonData);
-
   return (
     <ul className={`flex items-center gap-[30px] ${className}`}>
       {buttonData?.map(({ id, link, title }) => {
