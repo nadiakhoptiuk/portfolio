@@ -1,7 +1,10 @@
 import React from 'react';
 import { Html, Head, Main, NextScript } from 'next/document';
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 export default function Document() {
+  const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
+
   return (
     <Html lang="en">
       <Head>
@@ -80,6 +83,8 @@ export default function Document() {
 
         <NextScript />
       </body>
+
+      <GoogleAnalytics gaId={GA_ID} />
     </Html>
   );
 }
