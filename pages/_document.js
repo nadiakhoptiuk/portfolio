@@ -73,6 +73,11 @@ export default function Document() {
           property="og:title"
           content="Full Stack Developer Nadiia Khoptiuk's portfolio"
         />
+
+        <meta
+          name="google-site-verification"
+          content="NCpHaIZmpEMhlpLYxaY3HSnOmsHPfRglHyLwAm2KVqs"
+        />
       </Head>
 
       <body>
